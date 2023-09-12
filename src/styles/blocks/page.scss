@@ -1,0 +1,20 @@
+@import "../utils/mixins";
+@import "../utils/vars";
+
+.page {
+  &__container {
+    padding: 0 1rem;
+
+    @include onTablet {
+      padding: 0 5rem;
+    }
+
+    @include onDesktopMiddle {
+      padding: 0 15rem;
+    }
+
+    @include onDesktopWide {
+      padding: 0 21rem;
+    }
+  }
+}

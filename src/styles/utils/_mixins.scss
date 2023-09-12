@@ -1,0 +1,70 @@
+@import "./vars";
+
+@mixin onPhone {
+  @media (max-width: 667px) {
+    @content;
+  }
+}
+
+@mixin onTabletAndDesktop {
+  @media (min-width: 667px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktopSmall {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onDesktopMiddle {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin onDesktopWide {
+  @media (min-width: 1680px) {
+    @content;
+  }
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexJustifyCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexColumnAlignCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexJustifyAlignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexJustifyAlignBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
