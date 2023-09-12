@@ -1,84 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="dist/css/main.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=Bebas+Neue&family=Galada&family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-  />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
-  <title>Smart Avenue</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <title>Smart Avenue</title>
+  </head>
 
-<body class="page">
-  <header class="header page__section">
-    <nav class="page__nav nav">
-      <div class="nav__content">    
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#" class="nav__link">Home</a>
-          </li>
+  <body class="page">
+    <header class="header page__section">
+      <nav class="page__nav nav">
+        <div class="nav__content">
+          <ul class="nav__list">
+            <a href="#" class="nav__logo">
+              <img
+                class="nav__logo__image"
+                src="src/images/logo-box.png"
+                alt="Smart Avenue Logo"
+              />
+            </a>
 
-          <li class="nav__item nav__item--with-dropdown">
-            <a href="#boxes" class="nav__link">Boxes</a>
+            <li class="nav__item nav__item--underline">
+              <a href="#" class="nav__link">Головна</a>
+            </li>
 
-            <div class="nav__dropdown">
-              <a href="#whats-inside" class="nav__dropdown__link">What's inside</a>
+            <li class="nav__item nav__item--underline">
+              <a href="#about" class="nav__link">Про комплекс</a>
+            </li>
 
-              <a href="#kiwi-box" class="nav__dropdown__link">Kiwi Eco Box</a>
-            </div>
-          </li>
+            <li class="nav__item nav__item--underline">
+              <a href="#location" class="nav__link">Розташування</a>
+            </li>
 
-          <a href="#" class="nav__logo">
-            <img
-              class="nav__logo__image"
-              src="src/images/logo.svg"
-              alt="Kiwi Logo"
-            >
-          </a>
+            <li class="nav__item nav__item--underline">
+              <a href="#planning" class="nav__link">Планування</a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
+            <li class="nav__item nav__item--underline">
+              <a href="#news" class="nav__link">Новини</a>
+            </li>
 
-          <li class="nav__item">
-            <a href="#clients" class="nav__link">clients</a>
-          </li>
+            <li class="nav__item nav__item--additional">
+              <div class="nav__item--additional-info">
+                <img
+                  src="src/images/icons/globe.svg"
+                  alt="globe icon"
+                />
+                
+                <div>
+                  <p class="nav__item--subtitle">Мова</p>
 
-          <a href="#nav" class="nav__icons nav__icons--burger">
-            <img src="src/images/icons/hamburger-menu.svg" alt="Burger icon"/>
-          </a>
+                  <div class="nav__select">
+                    <select class="js-select-language" name="language">
+                      <option value="UKR">UKR</option>
+                      <option value="ENG">ENG</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
 
-          <a href="#" class="nav__icons nav__icons--cross nav__icons--undisplayed">
-            <img src="src/images/icons/cancel.svg" alt="Cross icon"/>
-          </a>
-        </ul>
-      </div>
-    </nav>
-  </header>
+              <div class="nav__item--additional-info">
+                <img
+                  src="src/images/icons/geo.svg"
+                  alt="geo icon"
+                />
 
-  <main>
-    <section id="" class="page__section boxes">
-    </section>
-  </main>
-
-  <footer class="page__footer footer">
-  </footer>
+                <div class="nav__item--additional-geo">
+                  <div class="nav__item--subtitles">
+                    <p class="nav__item--subtitle">Адреса</p>
+                    <a href="#contacts" class="nav__item--subtitle">Як проїхати?</a>
+                  </div>
   
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-  <script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script type="module" src="dist/js/main.min.js"></script>
-</body>
+                  <a href="#geolocation" class="nav__link--additional">с.Крюковщина 191, Київська область</a>
+                </div>
+              </div>
+
+              <div class="nav__item--additional-info">
+                <img
+                  src="src/images/icons/phone.svg"
+                  alt="phone icon"
+                />
+
+                <div>
+                  <p class="nav__item--subtitle">Телефон 09:00 - 19:00</p>
+                  <a href="#geolocation" class="nav__link--additional">+380 (99) 2337 999</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="" class="page__section boxes"></section>
+    </main>
+
+    <footer class="page__footer footer"></footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="module" src="dist/js/main.min.js"></script>
+  </body>
 </html>

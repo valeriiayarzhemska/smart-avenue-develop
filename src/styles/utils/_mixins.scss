@@ -57,10 +57,22 @@
   align-items: center;
 }
 
+@mixin flexColumnAlignStart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 @mixin flexJustifyAlignCenter {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin flexJustifyAlignEnd {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 @mixin flexJustifyAlignBetween {

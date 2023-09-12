@@ -1,0 +1,74 @@
+@import "../utils/mixins";
+
+.nav {
+  &__list {
+    @include flexJustifyAlignEnd;
+    gap: 1.9rem;
+  }
+
+  &__item {
+    padding: 1.3rem 0;
+  }
+
+  &__item--underline {
+    display: inline-block;
+  }
+
+  &__item--underline > a {
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+  }
+  
+  &__item--underline > a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;
+    
+  }
+  
+  &__item--underline > a:hover::after, li > a.active-nav::after {
+    width: 100%;
+    background: blue;
+  }
+
+  &__item--additional {
+    @include flexJustifyAlignEnd;
+    gap: 1.3rem;
+  }
+
+  &__item--additional-info {
+    @include flexJustifyAlignEnd;
+    gap: 0.5rem;
+  }
+
+  &__item--additional-geo {
+    @include flexColumnAlignStart;
+  }
+
+  &__item--subtitles {
+    @include flexJustifyAlignCenter;
+    gap: 0.5rem;
+  }
+
+  &__item--subtitle {
+    display: block;
+    font-size: 0.7rem;
+  }
+
+  &__item--geolocation {
+    @include flexColumn;
+    align-items: flex-start;
+  }
+
+  &__link--additional {
+    display: inline-block;
+    margin-top: 0.7rem;
+  }
+}
