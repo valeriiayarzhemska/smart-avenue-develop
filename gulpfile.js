@@ -45,7 +45,7 @@ gulp.task('styles', function () {
     .src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
-    .pipe(cssnano())
+    .pipe(cssnano({zindex: false}))
     .pipe(concat('main.min.css'))
     .pipe(gulp.dest(paths.styles.dest));
 });

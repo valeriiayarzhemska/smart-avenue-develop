@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="dist/css/main.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,11 +64,8 @@
 
             <li class="nav__item nav__item--additional">
               <div class="nav__item--additional-info">
-                <img
-                  src="src/images/icons/globe.svg"
-                  alt="globe icon"
-                />
-                
+                <img src="src/images/icons/globe.svg" alt="globe icon" />
+
                 <div>
                   <p class="nav__item--subtitle">Мова</p>
 
@@ -79,30 +79,30 @@
               </div>
 
               <div class="nav__item--additional-info">
-                <img
-                  src="src/images/icons/geo.svg"
-                  alt="geo icon"
-                />
+                <img src="src/images/icons/geo.svg" alt="geo icon" />
 
                 <div class="nav__item--additional-geo">
                   <div class="nav__item--subtitles">
                     <p class="nav__item--subtitle">Адреса</p>
-                    <a href="#contacts" class="nav__item--subtitle">Як проїхати?</a>
+                    <a href="#contacts" class="nav__item--subtitle"
+                      >Як проїхати?</a
+                    >
                   </div>
-  
-                  <a href="#geolocation" class="nav__link--additional">с.Крюковщина 191, Київська область</a>
+
+                  <a href="#geolocation" class="nav__link--additional"
+                    >с.Крюковщина 191, Київська область</a
+                  >
                 </div>
               </div>
 
               <div class="nav__item--additional-info">
-                <img
-                  src="src/images/icons/phone.svg"
-                  alt="phone icon"
-                />
+                <img src="src/images/icons/phone.svg" alt="phone icon" />
 
                 <div>
                   <p class="nav__item--subtitle">Телефон 09:00 - 19:00</p>
-                  <a href="#geolocation" class="nav__link--additional">+380 (99) 2337 999</a>
+                  <a href="#geolocation" class="nav__link--additional"
+                    >+380 (99) 2337 999</a
+                  >
                 </div>
               </div>
             </li>
@@ -112,7 +112,122 @@
     </header>
 
     <main>
-      <section id="" class="page__section boxes"></section>
+      <section id="main" class="page__section main">
+        <div class="swiper main__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide main__swiper-slide">
+              <img
+                class="main__swiper-image"
+                src="src/images/main-background.png"
+                alt="main background"
+              />
+
+              <div class="page__container">
+                <div class="main__titles">
+                  <h4 class="main__subtitle">
+                    Житловий комплекс “Dream House”
+                  </h4>
+
+                  <h1 class="main__title">Смарт квартира 22м² в Крюковщині</h1>
+
+                  <h4 class="main__subtitle">
+                    Від <span class="main__subtitle--price">16 500&#36;</span>
+                  </h4>
+                </div>
+
+                <div class="main__button button">
+                  <a href="#" class="button__link"> Обрати квартиру </a>
+
+                  <img
+                    class="button__icon"
+                    src="src/images/icons/arrow-right.svg"
+                    alt="right arrow"
+                  />
+                </div>
+
+                <div class="main__descriptions">
+                  <div class="main__description">
+                    <img
+                      class="main__description-icon"
+                      src="src/images/icons/compass.svg"
+                      alt="compass"
+                    />
+
+                    <h4 class="main__subtitle">10 хвилин до Києва</h4>
+                  </div>
+
+                  <div class="main__description">
+                    <img
+                      class="main__description-icon"
+                      src="src/images/icons/location.svg"
+                      alt="location"
+                    />
+
+                    <h4 class="main__subtitle">Ліс в 2 хвилинах</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide main__swiper-slide">
+              <div class="page__container">
+                <div class="main__titles">
+                  <h4 class="main__subtitle">
+                    Житловий комплекс “Dream House”
+                  </h4>
+
+                  <h1 class="main__title">Смарт квартира 22м² в Крюковщині</h1>
+
+                  <h4 class="main__subtitle">
+                    Від <span class="main__subtitle--price">16 500&#36;</span>
+                  </h4>
+                </div>
+
+                <div class="main__button button">
+                  <a href="#" class="button__link"> Обрати квартиру </a>
+
+                  <img
+                    class="button__icon"
+                    src="src/images/icons/arrow-right.svg"
+                    alt="right arrow"
+                  />
+                </div>
+
+                <div class="main__descriptions">
+                  <div class="main__description">
+                    <img
+                      class="main__description-icon"
+                      src="src/images/icons/compass.svg"
+                      alt="compass"
+                    />
+
+                    <h4 class="main__subtitle">10 хвилин до Києва</h4>
+                  </div>
+
+                  <div class="main__description">
+                    <img
+                      class="main__description-icon"
+                      src="src/images/icons/location.svg"
+                      alt="location"
+                    />
+
+                    <h4 class="main__subtitle">Ліс в 2 хвилинах</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination main__swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
     </main>
 
     <footer class="page__footer footer"></footer>

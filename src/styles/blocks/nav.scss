@@ -1,9 +1,24 @@
 @import "../utils/mixins";
+@import "../utils/vars";
 
 .nav {
   &__list {
-    @include flexJustifyAlignEnd;
+    @include flexJustifyAlignCenter;
     gap: 1.9rem;
+  }
+
+  &__link {
+    color: $white-color;
+    opacity: 0.8;
+  }
+
+  &__link:hover::after {
+    opacity: 1;
+  }
+
+  &__link--additional {
+    display: inline-block;
+    margin-top: 0.76rem;
   }
 
   &__item {
@@ -15,32 +30,32 @@
   }
 
   &__item--underline > a {
-    color: #333;
-    text-decoration: none;
     display: inline-block;
     position: relative;
   }
-  
+
   &__item--underline > a::after {
     content: "";
     display: block;
+    position: absolute;
     margin: auto;
     height: 3px;
     width: 0;
-    top: 5px;
+    top: -2.2rem;
     background: transparent;
     transition: all 0.3s;
-    
   }
-  
-  &__item--underline > a:hover::after, li > a.active-nav::after {
+
+  &__item--underline > a:hover::after,
+  li > a.active-nav::after {
     width: 100%;
-    background: blue;
+    background: $main-red-color;
   }
 
   &__item--additional {
     @include flexJustifyAlignEnd;
     gap: 1.3rem;
+    color: $white-color;
   }
 
   &__item--additional-info {
@@ -59,16 +74,13 @@
 
   &__item--subtitle {
     display: block;
+    color: $white-color;
+    opacity: 0.8;
     font-size: 0.7rem;
   }
 
   &__item--geolocation {
     @include flexColumn;
     align-items: flex-start;
-  }
-
-  &__link--additional {
-    display: inline-block;
-    margin-top: 0.7rem;
   }
 }

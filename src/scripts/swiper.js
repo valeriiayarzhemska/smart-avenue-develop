@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
-const blogSwiper = new Swiper('.blog__swiper', {
+const mainSwiper = new Swiper('.main__swiper', {
   direction: 'horizontal',
   loop: true,
 
   pagination: {
-    el: '.blog__swiper-pagination',
+    el: '.main__swiper-pagination',
     clickable: true,
   },
 });

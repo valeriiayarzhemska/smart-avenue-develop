@@ -3,9 +3,9 @@
 
 .page {
   &__container {
-    padding: 0 1rem;
+    padding: 0 6.3rem;
 
-    @include onTablet {
+    /* @include onTablet {
       padding: 0 5rem;
     }
 
@@ -15,6 +15,6 @@
 
     @include onDesktopWide {
       padding: 0 21rem;
-    }
+    } */
   }
 }
