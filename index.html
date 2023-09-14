@@ -116,13 +116,15 @@
         <div class="swiper main__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide main__swiper-slide">
-              <img
-                class="main__swiper-image"
-                src="src/images/main-background.png"
-                alt="main background"
-              />
+              <div class="main__swiper-image-container">
+                <img
+                  class="main__swiper-image"
+                  src="src/images/main-background.png"
+                  alt="main background"
+                />
+              </div>
 
-              <div class="page__container">
+              <div class="page__container main__swiper-container">
                 <div class="main__titles">
                   <h4 class="main__subtitle">
                     Житловий комплекс “Dream House”
@@ -147,21 +149,25 @@
 
                 <div class="main__descriptions">
                   <div class="main__description">
-                    <img
-                      class="main__description-icon"
-                      src="src/images/icons/compass.svg"
-                      alt="compass"
-                    />
+                    <div class="main__description-image-container">
+                      <img
+                        class="main__description-icon"
+                        src="src/images/icons/compass.svg"
+                        alt="compass"
+                      />
+                    </div>
 
                     <h4 class="main__subtitle">10 хвилин до Києва</h4>
                   </div>
 
                   <div class="main__description">
-                    <img
-                      class="main__description-icon"
-                      src="src/images/icons/location.svg"
-                      alt="location"
-                    />
+                    <div class="main__description-image-container">
+                      <img
+                        class="main__description-icon"
+                        src="src/images/icons/location.svg"
+                        alt="location"
+                      />
+                    </div>
 
                     <h4 class="main__subtitle">Ліс в 2 хвилинах</h4>
                   </div>
@@ -170,7 +176,15 @@
             </div>
 
             <div class="swiper-slide main__swiper-slide">
-              <div class="page__container">
+              <div class="main__swiper-image-container">
+                <img
+                  class="main__swiper-image"
+                  src="src/images/main-background.png"
+                  alt="main background"
+                />
+              </div>
+
+              <div class="page__container main__swiper-container">
                 <div class="main__titles">
                   <h4 class="main__subtitle">
                     Житловий комплекс “Dream House”
@@ -195,21 +209,25 @@
 
                 <div class="main__descriptions">
                   <div class="main__description">
-                    <img
-                      class="main__description-icon"
-                      src="src/images/icons/compass.svg"
-                      alt="compass"
-                    />
+                    <div class="main__description-image-container">
+                      <img
+                        class="main__description-icon"
+                        src="src/images/icons/compass.svg"
+                        alt="compass"
+                      />
+                    </div>
 
                     <h4 class="main__subtitle">10 хвилин до Києва</h4>
                   </div>
 
                   <div class="main__description">
-                    <img
-                      class="main__description-icon"
-                      src="src/images/icons/location.svg"
-                      alt="location"
-                    />
+                    <div class="main__description-image-container">
+                      <img
+                        class="main__description-icon"
+                        src="src/images/icons/location.svg"
+                        alt="location"
+                      />
+                    </div>
 
                     <h4 class="main__subtitle">Ліс в 2 хвилинах</h4>
                   </div>
@@ -217,15 +235,48 @@
               </div>
             </div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination main__swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="main__swiper-buttons-wrapper">
+            <div class="main__swiper-buttons">
+              <div class="swiper-button-prev main__swiper-button-prev">
+                <img
+                  src="src/images/icons/arrow-swiper.svg"
+                  alt="arrow"
+                />
+              </div>
+              <div class="swiper-button-next main__swiper-button-next">
+                <img
+                  src="src/images/icons/arrow-swiper.svg"
+                  alt="arrow"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+        <div class="page__container">
+          <div class="main__social">
+            <div class="main__social-icon-container">
+              <img
+                src="src/images/icons/inst.svg"
+                alt="instagram"
+              >
+            </div>
+  
+            <div class="main__social-icon-container">
+              <img
+                src="src/images/icons/fb.svg"
+                alt="facebook"
+              >
+            </div>
+  
+            <div class="main__social-icon-container">
+              <img
+                src="src/images/icons/yt.svg"
+                alt="youtube"
+              >
+            </div>
+          </div>
         </div>
       </section>
     </main>
