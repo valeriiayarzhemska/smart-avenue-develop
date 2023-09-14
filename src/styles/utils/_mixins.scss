@@ -75,6 +75,11 @@
   align-items: flex-end;
 }
 
+@mixin flexJustifyEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @mixin flexJustifyAlignBetween {
   display: flex;
   justify-content: space-between;
