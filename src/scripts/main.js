@@ -1,6 +1,6 @@
 'use strict';
 
-const navIconBurger = document.querySelector('.nav__icons--burger');
+/* const navIconBurger = document.querySelector('.nav__icons--burger');
 const navIconCross = document.querySelector('.nav__icons--cross');
 
 window.addEventListener('hashchange', () => {
@@ -15,4 +15,4 @@ window.addEventListener('hashchange', () => {
 
     document.body.style.overflow = 'auto';
   }
-});
+}); */

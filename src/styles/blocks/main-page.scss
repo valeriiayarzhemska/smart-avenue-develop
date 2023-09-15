@@ -1,11 +1,11 @@
 @import "../utils/mixins";
 @import "../utils/vars";
 
-.main {
+.main-page {
   position: relative;
 
   &__swiper {
-    height: 45rem;
+    height: 72rem;
 
     &-image-container {
       display: flex;
@@ -32,33 +32,34 @@
 
     &-container {
       @include flexColumn;
-      gap: 2.1rem;
+      gap: 3rem;
       position: relative;
     }
 
     &-buttons-wrapper {
       @include flexJustifyCenter;
+      position: relative;
     }
 
     &-buttons {
       position: absolute;
       display: flex;
       top: initial;
-      bottom: 4.7rem;
-      width: 13rem;
+      bottom: 6.8rem;
+      width: 18.2rem;
     }
 
     &-button-prev,
     &-button-next {
-      width: 5.8rem !important;
-      height: 6.4rem !important;
-      background-color: rgba(255,255,255, 0.2);
+      width: 8.1rem !important;
+      height: 9rem !important;
+      background-color: rgba(255, 255, 255, 0.2);
     }
 
     &-button-prev > img,
     &-button-next > img {
-      width: 2.3rem;
-      height: 2.3rem;
+      width: 3.2rem;
+      height: 3.2rem;
     }
 
     &-button-next > img {
@@ -67,58 +68,62 @@
   }
 
   &__titles {
-    padding-top: 11rem;
+    padding-top: 17.5rem;
   }
 
   &__title {
-    margin-top: 0.6rem;
-    margin-bottom: 1rem;
-    max-width: 38rem;
-    font-size: 2.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1.5rem;
+    max-width: 60.5rem;
+    font-size: 4.4rem;
     font-weight: 800;
-    line-height: 3.9rem;
+    line-height: 6.2rem;
     color: $white-color;
   }
 
   &__subtitles-price {
     @include flexAlignCenter;
-    gap: 0.7rem;
+    gap: 1rem;
   }
 
   &__subtitle {
     opacity: 0.8;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 400;
-    line-height: 1.4rem;
+    line-height: 2.2rem;
     color: $white-color;
   }
 
   &__subtitle-sum {
     opacity: 1;
-    font-size: 2.3rem;
+    font-size: 3.2rem;
     font-weight: 500;
-    line-height: 3.2rem;
+    line-height: 4.5rem;
     color: $white-color;
   }
 
   &__descriptions {
     @include flexAlignCenter;
-    gap: 2.1rem;
+    gap: 3rem;
   }
 
   &__description {
     @include flexJustifyAlignCenter;
-    gap: 0.9rem;
+    gap: 1.2rem;
 
-    &-image-container {
-      width: 2.9rem;
-      height: 2.9rem;
+    &-icon {
+      width: 100%;
+
+      &-container {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 
   &__social {
     @include flexColumnAlignCenter;
-    gap: 1.4rem;
+    gap: 2rem;
     position: absolute;
     top: 40%;
     z-index: 2;
@@ -129,8 +134,25 @@
 
     &__icon-link {
       @include flexJustifyAlignCenter;
-      width: 1.7rem;
-      height: 1.7rem;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__presentation {
+    &-container {
+      @include flexJustifyAlignCenter;
+      position: absolute;
+      z-index: 1;
+      background-color: $main-red-color;
+    }
+
+    &-content {
+      @include flexJustifyAlignCenter;
+    }
+
+    &-titles {
+      padding: 4.8rem 0 3.9rem;
     }
   }
 }
