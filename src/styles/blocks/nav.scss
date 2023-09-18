@@ -2,6 +2,12 @@
 @import "../utils/vars";
 
 .nav {
+  &__content {
+    @include onTablet {
+      display: none;
+    }
+  }
+
   &__list {
     @include flexJustifyAlignCenter;
     gap: 3rem;
@@ -97,5 +103,149 @@
 }
 
 a.nav__item--subtitle {
+  text-decoration: underline;
+}
+
+.nav-mobile {
+  &__head {
+    @include flexJustifyAlignCenter;
+    position: relative;
+    height: 7.5rem;
+  }
+
+  &__icons {
+    position: absolute;
+    top: 30%;
+    left: 2.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  &__icons--undisplayed {
+    display: none;
+  }
+
+  &__logo {
+    height: 7.5rem;
+  }
+
+  &__lists {
+    @include flexJustifyAlignBetween;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    padding: 0 3rem 3.5rem;
+    height: calc(100vh - 7.5rem);
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+
+    &:target {
+      transition: transform 0.3s ease-out;
+      transform: translateX(0);
+    }
+
+    /* @include onDesktopSmall {
+    overflow: hidden;
+  } */
+  }
+
+  &__list {
+    @include flexColumnAlignCenter;
+    gap: 3rem;
+  }
+
+  &__link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 3.6rem;
+    letter-spacing: -0.03rem;
+  }
+
+  &__delimeter {
+    width: 100%;
+    height: 0.1rem;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  &__contacts-list {
+    @include flexColumnAlignStart;
+    gap: 1.3rem;
+  }
+
+  &__item--additional-info,
+  &__item--additional-info-language,
+  &__item--additional-info-phone {
+    @include flexAlignEnd;
+    gap: 0.5rem;
+  }
+
+  &__item--additional-language {
+    position: relative;
+  }
+
+  &__item--additional-geo {
+    @include flexColumnAlignStart;
+  }
+
+  &__item--subtitles {
+    @include flexJustifyAlignCenter;
+    gap: 0.8rem;
+  }
+
+  &__item--subtitle {
+    display: block;
+    opacity: 0.8;
+    font-size: 1.1rem;
+  }
+
+  &__item--subtitle-language {
+    position: absolute;
+    top: -0.8rem;
+  }
+
+  &__item--geolocation {
+    @include flexColumn;
+    align-items: flex-start;
+  }
+
+  &__link--additional {
+    margin-top: 0.9rem;
+  }
+
+  /* &__contacts-list {
+    position: relative;
+  }
+
+  &__contacts-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: calc(110vw - 3rem);
+    height: 0.1rem;
+    background: rgba(0, 0, 0, 0.1);
+  } */
+
+  &__social {
+    @include flexAlignCenter;
+    gap: 2rem;
+
+    &-icon-link {
+      @include flexJustifyAlignCenter;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &-icon-link > img {
+      width: 100%;
+    }
+  }
+}
+
+a.nav-mobile__item--subtitle {
   text-decoration: underline;
 }

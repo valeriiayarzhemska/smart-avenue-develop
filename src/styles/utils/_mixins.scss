@@ -1,7 +1,7 @@
 @import "./vars";
 
 @mixin onPhone {
-  @media (max-width: 667px) {
+  @media (max-width: 666px) {
     @content;
   }
 }
@@ -13,7 +13,7 @@
 }
 
 @mixin onTablet {
-  @media (min-width: 768px) {
+  @media (max-width: 1023px) {
     @content;
   }
 }
@@ -75,13 +75,25 @@
   align-items: flex-end;
 }
 
+@mixin flexAlignEnd {
+  display: flex;
+  align-items: flex-end;
+}
+
 @mixin flexJustifyEnd {
   display: flex;
   justify-content: flex-end;
 }
 
+@mixin flexColumnJustifyAlignBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin flexJustifyAlignBetween {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }

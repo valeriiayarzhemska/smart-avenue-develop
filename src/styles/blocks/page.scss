@@ -5,11 +5,11 @@
   &__container {
     padding: 0 10rem;
 
-    /* @include onTablet {
-      padding: 0 5rem;
+    @include onTablet {
+      padding: 0 3rem;
     }
 
-    @include onDesktopMiddle {
+    /* @include onDesktopMiddle {
       padding: 0 15rem;
     }
 

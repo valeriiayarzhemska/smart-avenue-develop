@@ -3,6 +3,9 @@
 
 .main-page {
   position: relative;
+  @include onTablet {
+    display: none;
+  }
 
   &__swiper {
     height: 72rem;
@@ -25,7 +28,6 @@
       position: absolute;
       min-width: 100%;
       min-height: 100%;
-      overflow: hidden;
 
       z-index: -1;
     }
@@ -132,10 +134,14 @@
       @include flexJustifyEnd;
     }
 
-    &__icon-link {
+    &-icon-link {
       @include flexJustifyAlignCenter;
       width: 2.4rem;
       height: 2.4rem;
+    }
+
+    &-icon-link > img {
+      width: 100%;
     }
   }
 
@@ -143,16 +149,53 @@
     &-container {
       @include flexJustifyAlignCenter;
       position: absolute;
-      z-index: 1;
+      top: -2.2rem;
+      left: 17.2rem;
+      padding: 0 3.3rem 0 28rem;
+      z-index: 2;
       background-color: $main-red-color;
+    }
+
+    &-image-container {
+      position: absolute;
+      top: -3rem;
+      left: 2rem;
     }
 
     &-content {
       @include flexJustifyAlignCenter;
+      gap: 3.3rem;
     }
 
     &-titles {
+      @include flexColumn;
+      gap: 0.9rem;
       padding: 4.8rem 0 3.9rem;
+    }
+
+    &-title {
+      max-width: 16.3rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 700;
+      line-height: 3rem;
+      color: $white-color;
+    }
+
+    &-subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 2.2rem;
+      color: $white-color;
+    }
+
+    &-download {
+      @include flexColumnAlignCenter;
+
+      &-icon-container {
+        @include flexColumnAlignCenter;
+      }
     }
   }
 }

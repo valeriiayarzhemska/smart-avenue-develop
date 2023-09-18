@@ -110,6 +110,130 @@
             </li>
           </ul>
         </div>
+
+        <div class="nav-mobile__content">
+          <div class="nav-mobile__head">
+            <div class="nav-mobile__head-icons">
+              <a href="#nav" class="nav-mobile__icons nav-mobile__icons--burger">
+                <img
+                  src="src/images/icons/menu.svg"
+                  alt="burger menu"
+                />
+              </a>
+  
+              <a href="#" class="nav-mobile__icons nav-mobile__icons--cross nav-mobile__icons--undisplayed">
+                <img
+                  src="src/images/icons/cross.svg"
+                  alt="cross"
+                />
+              </a>
+            </div>
+
+            <a href="#" class="nav-mobile__logo">
+              <img
+                class="nav-mobile__logo__image"
+                src="src/images/logo-box.png"
+                alt="Smart Avenue Logo"
+              />
+            </a>
+          </div>
+
+          <div id="nav" class="nav-mobile__lists">
+            <ul class="nav-mobile__list nav-mobile__list--undisplayed">
+              <li class="nav-mobile__item nav-mobile__item--underline">
+                <a href="#" class="nav-mobile__link">Головна</a>
+              </li>
+  
+              <li class="nav-mobile__item nav-mobile__item--underline">
+                <a href="#about" class="nav-mobile__link">Про комплекс</a>
+              </li>
+  
+              <li class="nav-mobile__item nav-mobile__item--underline">
+                <a href="#location" class="nav-mobile__link">Розташування</a>
+              </li>
+  
+              <li class="nav-mobile__item nav-mobile__item--underline">
+                <a href="#planning" class="nav-mobile__link">Планування</a>
+              </li>
+  
+              <li class="nav-mobile__item nav-mobile__item--underline">
+                <a href="#news" class="nav-mobile__link">Новини</a>
+              </li>
+            </ul>
+
+            <div class="nav-mobile__delimeter"></div>
+  
+            <ul class="nav-mobile__contacts-list">  
+              <li class="nav-mobile__item--additional-info">
+                <img src="src/images/icons/geo.svg" alt="geo icon" />
+  
+                <div class="nav-mobile__item--additional-geo">
+                  <div class="nav-mobile__item--subtitles">
+                    <p class="nav-mobile__item--subtitle">Адреса</p>
+                    <a href="#contacts" class="nav-mobile__item--subtitle">
+                      Як проїхати?
+                    </a>
+                  </div>
+  
+                  <a href="#geolocation" class="nav-mobile__link--additional">
+                    с.Крюковщина 191, Київська область
+                  </a>
+                </div>
+              </li>
+
+              <li class="nav-mobile__item--additional-info">
+                <div class="nav-mobile__item--additional-info-language">
+                  <img src="src/images/icons/globe.svg" alt="globe icon" />
+    
+                  <div class="nav-mobile__item--additional-language">
+                    <p class="nav-mobile__item--subtitle nav-mobile__item--subtitle-language">
+                      Мова
+                    </p>
+    
+                    <div class="nav-mobile__select">
+                      <select class="js-select-language" name="language">
+                        <option value="UKR">UKR</option>
+                        <option value="ENG">ENG</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="nav-mobile__item--additional-info-phone">
+                  <img src="src/images/icons/phone.svg" alt="phone icon" />
+  
+                  <div>
+                    <p class="nav-mobile__item--subtitle">Телефон 09:00 - 19:00</p>
+                    <a href="#geolocation" class="nav-mobile__link--additional">
+                      +380 (99) 2337 999
+                    </a>
+                  </div>
+                </div>                
+              </li>
+  
+              <li class="nav-mobile__item--additional-info">
+                
+              </li>
+            </ul>
+
+            <div class="nav-mobile__social">
+              <a
+                href="https://www.instagram.com/"
+                class="nav-mobile__social-icon-link"
+              >
+                <img src="src/images/icons/inst-red.svg" alt="instagram" />
+              </a>
+
+              <a href="https://facebook.com/" class="nav-mobile__social-icon-link">
+                <img src="src/images/icons/fb-red.svg" alt="facebook" />
+              </a>
+
+              <a href="https://youtube.com/" class="nav-mobile__social-icon-link">
+                <img src="src/images/icons/yt-red.svg" alt="youtube" />
+              </a>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -132,10 +256,14 @@
                     Житловий комплекс “Dream House”
                   </h4>
 
-                  <h1 class="main-page__title">Смарт квартира 22м² в Крюковщині</h1>
+                  <h1 class="main-page__title">
+                    Смарт квартира 22м² в Крюковщині
+                  </h1>
 
                   <div class="main-page__subtitles-price">
-                    <h4 class="main-page__subtitle main-page__subtitle--price">Від</h4>
+                    <h4 class="main-page__subtitle main-page__subtitle--price">
+                      Від
+                    </h4>
 
                     <h4 class="main-page__subtitle-sum" style="opacity: 1">
                       16 500&#36;
@@ -196,10 +324,13 @@
                     Житловий комплекс “Dream House”
                   </h4>
 
-                  <h1 class="main-page__title">Смарт квартира 22м² в Крюковщині</h1>
+                  <h1 class="main-page__title">
+                    Смарт квартира 22м² в Крюковщині
+                  </h1>
 
                   <h4 class="main-page__subtitle">
-                    Від <span class="main-page__subtitle--price">16 500&#36;</span>
+                    Від
+                    <span class="main-page__subtitle--price">16 500&#36;</span>
                   </h4>
                 </div>
 
@@ -241,26 +372,40 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="main-page__swiper-buttons-wrapper">
+        <div class="main-page__swiper-buttons-wrapper">
+          <div class="main-page__swiper-buttons">
+            <div class="swiper-button-prev main-page__swiper-button-prev">
+              <img src="src/images/icons/arrow-swiper.svg" alt="arrow" />
+            </div>
+
+            <div class="swiper-button-next main-page__swiper-button-next">
+              <img src="src/images/icons/arrow-swiper.svg" alt="arrow" />
+            </div>
+
             <div class="main-page__presentation-container">
               <div class="main-page__presentation-image-container">
                 <img
                   src="src/images/book-mockup.png"
                   class="main-page__presentation-image"
                   alt="book mockup"
-                >
+                />
               </div>
 
               <div class="main-page__presentation-content">
                 <div class="main-page__presentation-titles">
-                  <h3 class="main-page__presentation-title">
-                    Презентація комплексу
-                  </h3>
-  
-                  <h4 class="main-page__presentation-subtitle">
-                    Документ PDF, 18.6 mb
-                  </h4>
+                  <div class="main-page__presentation-title-container">
+                    <h3 class="main-page__presentation-title">
+                      Презентація комплексу
+                    </h3>
+                  </div>
+
+                  <div class="main-page-presentation-subtitle-container">
+                    <h4 class="main-page__presentation-subtitle">
+                      Документ PDF, 18.6 mb
+                    </h4>
+                  </div>
                 </div>
 
                 <div class="main-page__presentation-download">
@@ -269,27 +414,21 @@
                     download="presentation"
                     class="main-page__presentation-download-link"
                   >
-                    <img
-                      src="src/images/icons/download.svg"
-                      class="main-page__presentation-download-icon"
-                      alt="download"
+                    <div
+                      class="main-page__presentation-download-icon-container"
                     >
-  
-                    <p class="main-page__presentation-subtitle">
-                      Завантажити
-                    </p>
+                      <img
+                        src="src/images/icons/download.svg"
+                        class="main-page__presentation-download-icon"
+                        alt="download"
+                      />
+                    </div>
+
+                    <div class="main-page__presentation-subtitle-container">
+                      <p class="main-page__presentation-subtitle">Скачати</p>
+                    </div>
                   </a>
                 </div>
-              </div>
-            </div>
-
-            <div class="main-page__swiper-buttons">
-              <div class="swiper-button-prev main-page__swiper-button-prev">
-                <img src="src/images/icons/arrow-swiper.svg" alt="arrow" />
-              </div>
-
-              <div class="swiper-button-next main-page__swiper-button-next">
-                <img src="src/images/icons/arrow-swiper.svg" alt="arrow" />
               </div>
             </div>
           </div>
@@ -297,7 +436,10 @@
 
         <div class="page__container main-page__social-container">
           <div class="main-page__social">
-            <a href="https://www.instagram.com/" class="main-page__social-icon-link">
+            <a
+              href="https://www.instagram.com/"
+              class="main-page__social-icon-link"
+            >
               <img src="src/images/icons/inst.svg" alt="instagram" />
             </a>
 
@@ -311,6 +453,8 @@
           </div>
         </div>
       </section>
+
+      <section class="page__section"></section>
     </main>
 
     <footer class="page__footer footer"></footer>
