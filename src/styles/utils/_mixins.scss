@@ -51,6 +51,13 @@
   align-items: center;
 }
 
+@mixin flexColumnJustifyAlignCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @mixin flexColumnAlignCenter {
   display: flex;
   flex-direction: column;

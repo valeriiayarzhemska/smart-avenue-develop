@@ -1,3 +1,4 @@
+@import "../utils/mixins";
 @import "../utils/vars";
 
 .select2-container .select2-selection {
@@ -39,6 +40,11 @@
 .select2-results {
   font-size: 1.4rem;
   color: $white-color;
+
+  @include onTablet {
+    font-size: 1.3rem;
+    color: $black-color;
+  }
 }
 
 .select2-results__option:first-child {

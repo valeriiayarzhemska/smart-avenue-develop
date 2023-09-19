@@ -3,9 +3,6 @@
 
 .main-page {
   position: relative;
-  @include onTablet {
-    display: none;
-  }
 
   &__swiper {
     height: 72rem;
