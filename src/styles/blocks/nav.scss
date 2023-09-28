@@ -109,6 +109,7 @@ a.nav__item--subtitle {
 .nav-mobile {
   &__content {
     display: none;
+    background: blue;
   
     @include onTablet {
       display: block;
@@ -119,6 +120,16 @@ a.nav__item--subtitle {
     @include flexJustifyAlignCenter;
     position: relative;
     height: 7.5rem;
+
+    /* &-icons {
+      @include onPhone {
+        display: block;
+      }
+
+      @include onTabletAndDesktop {
+        display: none;
+      }
+    } */
   }
 
   &__icons {
