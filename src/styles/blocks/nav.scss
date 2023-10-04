@@ -109,7 +109,7 @@ a.nav__item--subtitle {
 .nav-mobile {
   &__content {
     display: none;
-    background: blue;
+    background: $white-color;
   
     @include onTablet {
       display: block;
@@ -118,6 +118,7 @@ a.nav__item--subtitle {
 
   &__head {
     @include flexJustifyAlignCenter;
+    padding: 0 2.7rem 0 6rem;
     position: relative;
     height: 7.5rem;
 
@@ -145,6 +146,7 @@ a.nav__item--subtitle {
   }
 
   &__logo {
+    margin-right: 2.2rem;
     height: 7.5rem;
   }
 
@@ -277,4 +279,21 @@ a.nav__item--subtitle {
 
 a.nav-mobile__item--subtitle {
   text-decoration: underline;
+}
+
+#nav__tablet__additional {
+  display: none;
+
+  @include onTabletDesign {
+    display: flex;
+  }
+
+  & .nav__link--additional {
+    color: $black-color;
+  }
+
+  & .nav__item--subtitle {
+    color: $black-color;
+    opacity: 0.6;
+  }
 }

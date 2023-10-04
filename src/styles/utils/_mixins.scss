@@ -12,6 +12,12 @@
   }
 }
 
+@mixin onTabletDesign {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
 @mixin onTablet {
   @media (max-width: 1023px) {
     @content;
