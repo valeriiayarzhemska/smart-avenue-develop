@@ -32,6 +32,10 @@ const paths = {
     src: 'src/images/**/*.{png,jpg,jpeg,gif,svg}',
     dest: 'dist/src/images/',
   },
+  files: {
+    src: 'src/files/**/*.pdf',
+    dest: 'dist/src/files/',
+  },
 };
 
 gulp.task('clean', async function () {
@@ -85,6 +89,10 @@ gulp.task('images', function () {
     .pipe(gulp.dest(paths.images.dest));
 });
 
+gulp.task('files', function () {
+  return gulp.src(paths.files.src).pipe(gulp.dest(paths.files.dest));
+});
+
 export const start = gulp.task(
   'default',
   gulp.series('clean', gulp.parallel('styles', 'scripts', 'images'), 'serve'),
@@ -92,7 +100,7 @@ export const start = gulp.task(
 
 export const build = gulp.task(
   'build',
-  gulp.series('clean', gulp.parallel('styles', 'scripts', 'images', 'html')),
+  gulp.series('clean', gulp.parallel('styles', 'scripts', 'images', 'files', 'html')),
 );
 
 gulp.task('deploy', function () {

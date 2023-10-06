@@ -1,6 +1,18 @@
 @import "../utils/mixins";
 @import "../utils/vars";
 
+.select2 {
+  width: 51px !important;
+
+  @include onDesktopMini {
+    width: 40px !important;
+  }
+
+  @include onTablet {
+    width: 51px !important;
+  }
+}
+
 .select2-container .select2-selection {
   border: none;
   background: transparent;
@@ -19,19 +31,35 @@
 }
 
 .select2-results__option {
-  background-color: rgba(255,255,255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .select2-container--default
 .select2-selection--single
 .select2-selection__rendered {
   line-height: 4rem;
+
+  @include onDesktopMini {
+    line-height: 6.3rem;
+  }
+
+  @include onTablet {
+    line-height: 4rem;
+  }
 }
 
 .select2-container--default
 .select2-selection--single
 .select2-selection__arrow {
   height: 3.6rem;
+
+  @include onDesktopMini {
+    height: 5.9rem;
+  }
+
+  @include onTablet {
+    height: 3.6rem;
+  }
 }
 
 .select2-container--default
@@ -52,6 +80,6 @@
 }
 
 .select2-container--default
-.select2-results__option--highlighted.select2-results__option--selectable {
+  .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: $main-red-color;
 }

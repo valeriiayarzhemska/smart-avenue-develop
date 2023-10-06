@@ -24,23 +24,29 @@
   }
 }
 
+@mixin onDesktopMini {
+  @media (max-width: 1365px) {
+    @content;
+  }
+}
+
 @mixin onDesktopSmall {
-  @media (min-width: 1024px) {
+  @media (max-width: 1439px) {
     @content;
   }
 }
 
 @mixin onDesktopMiddle {
-  @media (min-width: 1440px) {
+  @media (max-width: 1679px) {
     @content;
   }
 }
 
-@mixin onDesktopWide {
-  @media (min-width: 1680px) {
+/* @mixin onDesktopWide {
+  @media (max-width: 1680px) {
     @content;
   }
-}
+} */
 
 @mixin flexColumn {
   display: flex;

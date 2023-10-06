@@ -1,3 +1,5 @@
+@import "./utils/mixins";
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +8,22 @@ html {
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
   scroll-behavior: smooth;
+
+  @include onDesktopSmall {
+    font-size: 9px;
+  }
+
+  @include onDesktopMini {
+    font-size: 7px;
+  }
+
+  @include onTablet {
+    font-size: 10px;
+  }
+
+  /* @include onDesktopMiddle {
+    font-size: 10px;
+  } */
 }
 
 body {

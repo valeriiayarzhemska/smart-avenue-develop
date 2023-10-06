@@ -9,6 +9,11 @@
 
     &-image-container {
       display: flex;
+      position: absolute;
+      width: 100%;
+      height: 72rem;
+      top: 0;
+      left: 0;
     }
 
     &-image-container::after {
@@ -22,11 +27,11 @@
     }
 
     &-image {
-      position: absolute;
+      display: block;
       min-width: 100%;
       min-height: 100%;
-
-      z-index: -1;
+      object-fit: cover;
+      object-position: center;
     }
 
     &-container {
@@ -38,6 +43,10 @@
     &-buttons-wrapper {
       @include flexJustifyCenter;
       position: relative;
+
+      @include onTablet {
+        justify-content: flex-start;
+      }
     }
 
     &-buttons {
@@ -46,6 +55,16 @@
       top: initial;
       bottom: 6.8rem;
       width: 18.2rem;
+
+      @include onDesktopSmall {
+        bottom: 6.6rem;
+        width: 18.42rem;
+      }
+
+      @include onDesktopMini {
+        bottom: 5.9rem;
+        width: 19.055rem;
+      }
     }
 
     &-button-prev,
@@ -53,6 +72,10 @@
       width: 8.1rem !important;
       height: 9rem !important;
       background-color: rgba(255, 255, 255, 0.2);
+
+      @include onTablet {
+        display: none !important;
+      }
     }
 
     &-button-prev > img,
@@ -78,6 +101,12 @@
     font-weight: 800;
     line-height: 6.2rem;
     color: $white-color;
+
+    @include onPhone {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 4.2rem;
+    }
   }
 
   &__subtitles-price {
@@ -104,6 +133,11 @@
   &__descriptions {
     @include flexAlignCenter;
     gap: 3rem;
+
+    @include onPhone {
+      @include flexColumnAlignStart;
+      gap: 1.8rem;
+    }
   }
 
   &__description {
@@ -126,6 +160,10 @@
     position: absolute;
     top: 40%;
     z-index: 2;
+
+    @include onPhone {
+      display: none;
+    }
 
     &-container {
       @include flexJustifyEnd;
@@ -150,24 +188,79 @@
       left: 17.2rem;
       padding: 0 3.3rem 0 28rem;
       z-index: 2;
+      height: 17.6rem;
       background-color: $main-red-color;
+
+      @include onDesktopSmall {
+        top: -2.4rem;
+        left: 17.3rem;
+      }
+
+      @include onDesktopMini {
+        top: -3.1rem;
+        left: 17.6rem;
+      }
+
+      @include onTablet {
+        left: 3rem;
+        width: calc(100vw - 6rem);
+      }
+
+      @include onPhone {
+        align-items: flex-start;
+        top: 5.9rem;
+        left: 0;
+        padding: 0 2.5rem;
+        width: 100vw;
+        height: 33.2rem;
+      }
     }
 
     &-image-container {
       position: absolute;
       top: -3rem;
       left: 2rem;
+      width: 25rem;
+      height: 20rem;
+
+      @include onPhone {
+        top: -8rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 32.5rem;
+        height: 26rem;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
     }
 
     &-content {
       @include flexJustifyAlignCenter;
       gap: 3.3rem;
+
+      @include onTablet {
+        justify-content: flex-end;
+        gap: 5rem;
+        width: 100%;
+      }
+  
+      @include onPhone {
+        @include flexColumnAlignCenter;
+        gap: 1.5rem;
+        padding-top: 18rem;
+      }
     }
 
     &-titles {
       @include flexColumn;
       gap: 0.9rem;
-      padding: 4.8rem 0 3.9rem;
+
+      @include onPhone {
+        justify-content: center;
+      }
     }
 
     &-title {
@@ -177,6 +270,10 @@
       font-weight: 700;
       line-height: 3rem;
       color: $white-color;
+
+      @include onTablet {
+        max-width: none;
+      }
     }
 
     &-subtitle {
@@ -185,6 +282,13 @@
       font-weight: 400;
       line-height: 2.2rem;
       color: $white-color;
+      opacity: 0.6;
+
+      &-container {
+        @include onPhone {
+          @include flexColumnAlignCenter;
+        }
+      }
     }
 
     &-download {
@@ -192,6 +296,14 @@
 
       &-icon-container {
         @include flexColumnAlignCenter;
+      }
+
+      &-link {
+        @include onPhone {
+          @include flexAlignCenter;
+          flex-direction: row-reverse;
+          gap: 1.7rem;
+        }
       }
     }
   }

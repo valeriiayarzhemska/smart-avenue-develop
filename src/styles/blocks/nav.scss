@@ -3,8 +3,25 @@
 
 .nav {
   &__content {
+    display: block;
+
     @include onTablet {
       display: none;
+    }
+  }
+
+  &__logo {
+    width: 18rem;
+    height: 7.5rem;
+
+    @include onDesktopSmall {
+      width: 17rem;
+      height: 7rem;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -30,7 +47,11 @@
   }
 
   &__item:not(:last-child) {
-    padding: 3rem 0;
+    padding: 2.6rem 0;
+
+    @include onDesktopMiddle {
+      padding: 3rem 0;
+    }
   }
 
   &__item--underline {
@@ -52,6 +73,14 @@
     top: -3.1rem;
     background: transparent;
     transition: all 0.3s;
+
+    @include onDesktopMini {
+      top: -2.7rem;
+    }
+  
+    @include onDesktopMiddle {
+      top: -3.1rem;
+    }
   }
 
   &__item--underline > a:hover::after,
@@ -94,6 +123,14 @@
   &__item--subtitle-language {
     position: absolute;
     top: -0.8rem;
+
+    @include onDesktopMini {
+     top: 0.3rem;
+    }
+
+    @include onTablet {
+      top: -0.8rem;
+     }
   }
 
   &__item--geolocation {
@@ -110,7 +147,7 @@ a.nav__item--subtitle {
   &__content {
     display: none;
     background: $white-color;
-  
+
     @include onTablet {
       display: block;
     }
@@ -121,16 +158,6 @@ a.nav__item--subtitle {
     padding: 0 2.7rem 0 6rem;
     position: relative;
     height: 7.5rem;
-
-    /* &-icons {
-      @include onPhone {
-        display: block;
-      }
-
-      @include onTabletAndDesktop {
-        display: none;
-      }
-    } */
   }
 
   &__icons {
@@ -158,6 +185,7 @@ a.nav__item--subtitle {
     right: 0;
     padding: 0 3rem 3.5rem;
     height: calc(100vh - 7.5rem);
+    background-color: $white-color;
 
     transform: translateX(-100%);
     transition: transform 0.3s ease-in;
@@ -167,7 +195,7 @@ a.nav__item--subtitle {
       transform: translateX(0);
     }
 
-    /* @include onDesktopSmall {
+    /* @include onDesktopMini {
     overflow: hidden;
   } */
   }
@@ -186,7 +214,7 @@ a.nav__item--subtitle {
     letter-spacing: -0.03rem;
     color: rgba(0, 0, 0, 0.7);
   }
-  
+
   &__link:hover {
     color: $black-color;
   }
@@ -245,21 +273,6 @@ a.nav__item--subtitle {
     @include flexColumn;
     align-items: flex-start;
   }
-
-  /* &__contacts-list {
-    position: relative;
-  }
-
-  &__contacts-list::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: calc(110vw - 3rem);
-    height: 0.1rem;
-    background: rgba(0, 0, 0, 0.1);
-  } */
 
   &__social {
     @include flexAlignCenter;
