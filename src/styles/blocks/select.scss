@@ -75,11 +75,15 @@
   }
 }
 
+.select2-text--scrolling {
+  color: $black-color !important;
+}
+
 .select2-results__option:first-child {
   margin-top: 0.8rem;
 }
 
 .select2-container--default
-  .select2-results__option--highlighted.select2-results__option--selectable {
+.select2-results__option--highlighted.select2-results__option--selectable {
   background-color: $main-red-color;
 }

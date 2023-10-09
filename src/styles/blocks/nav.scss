@@ -2,6 +2,10 @@
 @import "../utils/vars";
 
 .nav {
+  &__scrolling {
+    background-color: $white-color;
+  }
+
   &__content {
     display: block;
 
@@ -36,8 +40,12 @@
     opacity: 0.8;
   }
 
-  &__link:hover::after {
+  &__link:hover {
     opacity: 1;
+  }
+
+  &__link--scrolling {
+    color: $black-color;
   }
 
   &__link--additional {
@@ -48,10 +56,6 @@
 
   &__item:not(:last-child) {
     padding: 2.6rem 0;
-
-    @include onDesktopMiddle {
-      padding: 3rem 0;
-    }
   }
 
   &__item--underline {
@@ -70,17 +74,9 @@
     margin: auto;
     height: 3px;
     width: 0;
-    top: -3.1rem;
+    top: -3rem;
     background: transparent;
     transition: all 0.3s;
-
-    @include onDesktopMini {
-      top: -2.7rem;
-    }
-  
-    @include onDesktopMiddle {
-      top: -3.1rem;
-    }
   }
 
   &__item--underline > a:hover::after,
@@ -118,6 +114,10 @@
     color: $white-color;
     opacity: 0.8;
     font-size: 1.1rem;
+  }
+
+  &__item--scrolling {
+    color: $black-color;
   }
 
   &__item--subtitle-language {
@@ -194,10 +194,6 @@ a.nav__item--subtitle {
       transition: transform 0.3s ease-out;
       transform: translateX(0);
     }
-
-    /* @include onDesktopMini {
-    overflow: hidden;
-  } */
   }
 
   &__list {
