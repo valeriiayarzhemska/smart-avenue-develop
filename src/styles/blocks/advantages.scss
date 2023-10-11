@@ -3,9 +3,27 @@
 
 .advantages {
   position: relative;
+  margin-bottom: 9rem;
+  overflow: hidden;
+
+  @include onTablet {
+    margin-bottom: 7rem;
+  }
+
+  &__container-swiper {
+    display: block;
+
+    @include onPhone {
+      display: none;
+    }
+  }
 
   &__swiper {
     height: 72rem;
+
+    @include onTablet {
+      height: 63rem;
+    }
 
     &-image-container {
       display: flex;
@@ -14,12 +32,17 @@
       height: 67rem;
       top: 0;
       left: 0;
+
+      @include onTablet {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &-image {
       display: block;
-      min-width: 100%;
-      min-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center;
     }
@@ -28,6 +51,37 @@
       @include flexColumn;
       gap: 3rem;
       position: relative;
+    }
+
+    &-pagination {
+      display: none;
+
+      @include onTablet {
+        display: block;
+        bottom: 2rem !important;
+      }
+
+      @include onPhone {
+        height: 1.4rem;
+        top: 3rem !important;
+        left: -4.5rem !important;
+      }
+    }
+
+    &-pagination > .swiper-pagination-bullet {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $white-color;
+
+      @include onPhone {
+        width: 0.8rem;
+        height: 0.8rem;
+        background-color: $light-gray-color;
+      }
+    }
+
+    &-pagination > .swiper-pagination-bullet-active {
+      background-color: $main-red-color;
     }
 
     &-buttons-wrapper {
@@ -47,13 +101,13 @@
       width: 16.4rem;
 
       @include onDesktopSmall {
-        bottom: 6.6rem;
-        width: 18.42rem;
+        bottom: 9.8rem;
+        width: 16.6rem;
       }
 
       @include onDesktopMini {
-        bottom: 5.9rem;
-        width: 19.055rem;
+        bottom: 9.3rem;
+        width: 17.2rem;
       }
     }
 
@@ -82,132 +136,141 @@
     &-button-next > img {
       transform: rotate(180deg);
     }
-  }
 
-  &__presentation {
-    &-container {
-      @include flexJustifyAlignCenter;
-      position: absolute;
-      bottom: -5.2rem;
-      left: 15.3rem;
-      padding: 0 3.3rem 0 28rem;
-      z-index: 2;
-      height: 60rem;
-      background-color: $white-color;
-
-      @include onDesktopSmall {
-        top: -2.4rem;
-        left: 17.3rem;
+    &-slide {
+      position: relative;
+    
+      &-container {
+        position: absolute;
+        bottom: 4.9rem;
+        left: 87.3rem;
+        padding: 6rem 0 0 7rem;
+        z-index: 2;
+        max-width: 47rem;
+        height: 60rem;
+        background-color: $white-color;
+  
+        @include onDesktopSmall {
+          top: 7rem;
+          left: 87.3rem;
+        }
+  
+        @include onDesktopMini {
+          top: 6.9rem;
+          left: 87.6rem;
+        }
+  
+        @include onTablet {
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 100%;
+          height: 63rem;
+          padding: 13rem 5rem 14rem;
+          background-color: rgba(0, 0, 0, 0.4);
+        }
       }
-
-      @include onDesktopMini {
-        top: -3.1rem;
-        left: 17.6rem;
+  
+      &-image-container {
+        position: absolute;
+        top: -3rem;
+        left: 2rem;
+        width: 25rem;
+        height: 20rem;
       }
-
-      @include onTablet {
-        left: 3rem;
-        width: calc(100vw - 6rem);
+  
+      &-image {
+        width: 100%;
+        height: 100%;
       }
-
-      @include onPhone {
-        align-items: flex-start;
-        top: 5.9rem;
-        left: 0;
-        padding: 0 2.5rem;
-        width: 100vw;
-        height: 33.2rem;
+  
+      &-content {
+        @include flexColumnAlignStart;
+        gap: 3.5rem;
+  
+        @include onTablet {
+          justify-content: flex-end;
+          gap: 5rem;
+          width: 100%;
+        }
+      }
+  
+      &-info {
+        @include flexColumn;
+        gap: 3rem;
+      }
+  
+      &-title > h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 3.9rem;
+        color: $black-color;
+  
+        @include onTablet {
+          color: $white-color;
+        }
+      }
+  
+      &-description > p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.8rem;
+        color: $dark-gray-color;
+  
+        @include onTablet {
+          color: $white-color;
+        }
       }
     }
+  }
 
+  &__swiper-mobile-container {
+    display: none;
+
+    @include onPhone {
+      display: block;
+    }
+  }
+
+  &__swiper-mobile {
     &-image-container {
-      position: absolute;
-      top: -3rem;
-      left: 2rem;
-      width: 25rem;
-      height: 20rem;
-
-      @include onPhone {
-        top: -8rem;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 32.5rem;
-        height: 26rem;
-      }
+      margin-bottom: 3.7rem;
+      width: 100%;
+      height: 18rem;
     }
 
     &-image {
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
-    &-content {
-      @include flexJustifyAlignCenter;
-      gap: 3.3rem;
-
-      @include onTablet {
-        justify-content: flex-end;
-        gap: 5rem;
-        width: 100%;
+    &-slide {
+      &-content {
+        @include flexColumnAlignStart;
+        gap: 3.5rem;
       }
 
-      @include onPhone {
-        @include flexColumnAlignCenter;
-        gap: 1.5rem;
-        padding-top: 18rem;
-      }
-    }
-
-    &-titles {
-      @include flexColumn;
-      gap: 0.9rem;
-
-      @include onPhone {
-        justify-content: center;
-      }
-    }
-
-    &-title {
-      max-width: 16.3rem;
-      font-family: "Montserrat", sans-serif;
-      font-size: 2.1rem;
-      font-weight: 700;
-      line-height: 3rem;
-      color: $white-color;
-
-      @include onTablet {
-        max-width: none;
-      }
-    }
-
-    &-subtitle {
-      font-family: "Roboto", sans-serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      line-height: 2.2rem;
-      color: $white-color;
-      opacity: 0.6;
-
-      &-container {
-        @include onPhone {
-          @include flexColumnAlignCenter;
-        }
-      }
-    }
-
-    &-download {
-      @include flexColumnAlignCenter;
-
-      &-icon-container {
-        @include flexColumnAlignCenter;
+      &-info {
+        @include flexColumnAlignStart;
+        gap: 3rem;
       }
 
-      &-link {
-        @include onPhone {
-          @include flexAlignCenter;
-          flex-direction: row-reverse;
-          gap: 1.7rem;
-        }
+      &-title > h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 4.2rem;
+        color: $black-color;
+      }
+
+      &-description > p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.9rem;
+        color: $dark-gray-color;
       }
     }
   }

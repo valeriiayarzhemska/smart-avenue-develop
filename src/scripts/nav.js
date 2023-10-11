@@ -1,4 +1,4 @@
-$(window).scroll(function() {
+function handleScroll() {
   const scroll = $(window).scrollTop();
   const shouldAddNavClasses = scroll > 0;
 
@@ -10,4 +10,12 @@ $(window).scroll(function() {
 
   $('.select2-selection__rendered')
     .toggleClass('select2-text--scrolling', shouldAddNavClasses);
+}
+
+$(document).ready(function() {
+  handleScroll();
+});
+
+$(window).scroll(function() {
+  handleScroll();
 });

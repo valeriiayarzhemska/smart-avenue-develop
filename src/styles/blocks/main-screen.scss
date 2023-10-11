@@ -10,7 +10,7 @@
   }
 
   @include onPhone { 
-    margin-bottom: 0;
+    margin-bottom: 39.4rem;
   }
 
   &__swiper {
@@ -102,7 +102,7 @@
     padding-top: 17.5rem;
   }
 
-  &__title {
+  &__title > h1 {
     margin-top: 0.8rem;
     margin-bottom: 1.5rem;
     max-width: 60.5rem;
@@ -123,6 +123,7 @@
     gap: 1rem;
   }
 
+  &__subtitle > h4,
   &__subtitle {
     opacity: 0.8;
     font-size: 1.6rem;
@@ -272,7 +273,7 @@
       }
     }
 
-    &-title {
+    &-title > h3 {
       max-width: 16.3rem;
       font-family: "Montserrat", sans-serif;
       font-size: 2.1rem;
@@ -286,18 +287,19 @@
     }
 
     &-subtitle {
+      @include onPhone {
+        @include flexColumnAlignCenter;
+      }
+    }
+
+    &-subtitle > h4,
+    &-subtitle > p {
       font-family: "Roboto", sans-serif;
       font-size: 1.3rem;
       font-weight: 400;
       line-height: 2.2rem;
       color: $white-color;
       opacity: 0.6;
-
-      &-container {
-        @include onPhone {
-          @include flexColumnAlignCenter;
-        }
-      }
     }
 
     &-download {

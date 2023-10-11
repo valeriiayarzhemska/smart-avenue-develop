@@ -30,7 +30,7 @@
   </head>
 
   <body class="page">
-    <header class="header page__section">
+    <header class="header">
       <nav class="page__nav nav">
         <div class="nav__content">
           <ul class="nav__list">
@@ -297,7 +297,7 @@
     </header>
 
     <main>
-      <section id="main-screen" class="page__section main-screen">
+      <section id="main-screen" class="main-screen">
         <div class="swiper main-screen__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide main-screen__swiper-slide">
@@ -311,13 +311,13 @@
 
               <div class="page__container main-screen__swiper-container">
                 <div class="main-screen__titles">
-                  <h4 class="main-screen__subtitle">
-                    Житловий комплекс “Dream House”
-                  </h4>
+                  <div class="main-screen__subtitle">
+                    <h4>Житловий комплекс “Dream House”</h4>
+                  </div>
 
-                  <h1 class="main-screen__title">
-                    Смарт квартира 22м² в Крюковщині
-                  </h1>
+                  <div class="main-screen__title">
+                    <h1>Смарт квартира 22м² в Крюковщині</h1>
+                  </div>
 
                   <div class="main-screen__subtitles-price">
                     <h4
@@ -352,7 +352,9 @@
                       />
                     </div>
 
-                    <h4 class="main-screen__subtitle">10 хвилин до Києва</h4>
+                    <div class="main-screen__subtitle">
+                      <h4>10 хвилин до Києва</h4>
+                    </div>
                   </div>
 
                   <div class="main-screen__description">
@@ -364,7 +366,9 @@
                       />
                     </div>
 
-                    <h4 class="main-screen__subtitle">Ліс в 2 хвилинах</h4>
+                    <div class="main-screen__subtitle">
+                      <h4>Ліс в 2 хвилинах</h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -381,24 +385,29 @@
 
               <div class="page__container main-screen__swiper-container">
                 <div class="main-screen__titles">
-                  <h4 class="main-screen__subtitle">
-                    Житловий комплекс “Dream House”
-                  </h4>
+                  <div class="main-screen__subtitle">
+                    <h4>Житловий комплекс “Dream House”</h4>
+                  </div>
 
-                  <h1 class="main-screen__title">
-                    Смарт квартира 22м² в Крюковщині
-                  </h1>
+                  <div class="main-screen__title">
+                    <h1>Смарт квартира 22м² в Крюковщині</h1>
+                  </div>
 
-                  <h4 class="main-screen__subtitle">
-                    Від
-                    <span class="main-screen__subtitle--price"
-                      >16 500&#36;</span
+                  <div class="main-screen__subtitles-price">
+                    <h4
+                      class="main-screen__subtitle main-screen__subtitle--price"
                     >
-                  </h4>
+                      Від
+                    </h4>
+
+                    <h4 class="main-screen__subtitle-sum" style="opacity: 1">
+                      16 500&#36;
+                    </h4>
+                  </div>
                 </div>
 
                 <div class="main-screen__button button">
-                  <a href="#" class="button__link"> Обрати квартиру </a>
+                  <a href="#" class="button__link">Обрати квартиру</a>
 
                   <img
                     class="button__icon"
@@ -417,7 +426,9 @@
                       />
                     </div>
 
-                    <h4 class="main-screen__subtitle">10 хвилин до Києва</h4>
+                    <div class="main-screen__subtitle">
+                      <h4>10 хвилин до Києва</h4>
+                    </div>
                   </div>
 
                   <div class="main-screen__description">
@@ -429,7 +440,9 @@
                       />
                     </div>
 
-                    <h4 class="main-screen__subtitle">Ліс в 2 хвилинах</h4>
+                    <div class="main-screen__subtitle">
+                      <h4>Ліс в 2 хвилинах</h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -458,16 +471,12 @@
 
               <div class="main-screen__presentation-content">
                 <div class="main-screen__presentation-titles">
-                  <div class="main-screen__presentation-title-container">
-                    <h3 class="main-screen__presentation-title">
-                      Презентація комплексу
-                    </h3>
+                  <div class="main-screen__presentation-title">
+                    <h3>Презентація комплексу</h3>
                   </div>
 
-                  <div class="main-screen__presentation-subtitle-container">
-                    <h4 class="main-screen__presentation-subtitle">
-                      Документ PDF, 18.6 mb
-                    </h4>
+                  <div class="main-screen__presentation-subtitle">
+                    <h4>Документ PDF, 18.6 mb</h4>
                   </div>
                 </div>
 
@@ -487,8 +496,8 @@
                       />
                     </div>
 
-                    <div class="main-screen__presentation-subtitle-container">
-                      <p class="main-screen__presentation-subtitle">Скачати</p>
+                    <div class="main-screen__presentation-subtitle">
+                      <p>Скачати</p>
                     </div>
                   </a>
                 </div>
@@ -523,74 +532,137 @@
         </div>
       </section>
 
-      <section id="advantages" class="page__section advantages">
-        <div class="swiper advantages__swiper">
+      <section id="advantages" class="page__container--tablet advantages">
+        <div class="advantages__container-swiper">
+          <div class="swiper advantages__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide advantages__swiper-slide">
               <div class="advantages__swiper-image-container">
                 <img
                   class="advantages__swiper-image"
-                  src="src/images/main-background.png"
+                  src="src/images/slider-image1.png"
                   alt="advantages background"
                 />
               </div>
 
-              <div class="page__container advantages__swiper-container">
-                <div class="advantages__titles">
-                  <h4 class="advantages__subtitle">
-                    Житловий комплекс “Dream House”
-                  </h4>
-
-                  <h1 class="advantages__title">
-                    Смарт квартира 22м² в Крюковщині
-                  </h1>
-
-                  <div class="advantages__subtitles-price">
-                    <h4
-                      class="advantages__subtitle advantages__subtitle--price"
-                    >
-                      Від
-                    </h4>
-
-                    <h4 class="advantages__subtitle-sum" style="opacity: 1">
-                      16 500&#36;
-                    </h4>
-                  </div>
-                </div>
-
-                <div class="advantages__button button">
-                  <a href="#" class="button__link">Обрати квартиру</a>
-
-                  <img
-                    class="button__icon"
-                    src="src/images/icons/arrow-right.svg"
-                    alt="right arrow"
-                  />
-                </div>
-
-                <div class="advantages__descriptions">
-                  <div class="advantages__description">
-                    <div class="advantages__description-icon-container">
-                      <img
-                        class="advantages__description-icon"
-                        src="src/images/icons/compass.svg"
-                        alt="compass"
-                      />
+              <div class="advantages__swiper-slide-container">
+                <div class="advantages__swiper-slide-content">
+                  <div class="box">
+                    <div class="progress" id="swiper-slide-progress1">
+                      <div class="inner">1/4</div>
                     </div>
-
-                    <h4 class="advantages__subtitle">10 хвилин до Києва</h4>
                   </div>
 
-                  <div class="advantages__description">
-                    <div class="advantages__description-icon-container">
-                      <img
-                        class="advantages__description-icon"
-                        src="src/images/icons/location.svg"
-                        alt="location"
-                      />
+                  <div class="advantages__swiper-slide-info">
+                    <div class="advantages__swiper-slide-title">
+                      <h2>Життя в оточенні природи</h2>
                     </div>
 
-                    <h4 class="advantages__subtitle">Ліс в 2 хвилинах</h4>
+                    <div class="advantages__swiper-slide-description">
+                      <p>
+                        Прокидайтеся вранці під спів птахів та шелест дерев.
+                        Також ви можете насолодитися гармонією природи після
+                        продуктивного рабочого дня, адже до лісу 2 хвилини від
+                        комплексу.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="advantages__button button">
+                    <a href="#" class="button__link"> Обрати квартиру </a>
+
+                    <img
+                      class="button__icon"
+                      src="src/images/icons/arrow-right.svg"
+                      alt="right arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide advantages__swiper-slide">
+              <div class="advantages__swiper-image-container">
+                <img
+                  class="advantages__swiper-image"
+                  src="src/images/slider-image2.png"
+                  alt="advantages background"
+                />
+              </div>
+
+              <div class="advantages__swiper-slide-container">
+                <div class="advantages__swiper-slide-content">
+                  <div class="box">
+                    <div class="progress" id="swiper-slide-progress2">
+                      <div class="inner">2/4</div>
+                    </div>
+                  </div>
+
+                  <div class="advantages__swiper-slide-info">
+                    <div class="advantages__swiper-slide-title">
+                      <h2>Смарт квартири з ефективним використанням площі</h2>
+                    </div>
+
+                    <div class="advantages__swiper-slide-description">
+                      <p>
+                        За рахунок архітектурних рішень та розумних планувань
+                        квартири, простір використовується найбільш ефективно.
+                        Нічого зайвого
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="advantages__button button">
+                    <a href="#" class="button__link"> Обрати квартиру </a>
+
+                    <img
+                      class="button__icon"
+                      src="src/images/icons/arrow-right.svg"
+                      alt="right arrow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide advantages__swiper-slide">
+              <div class="advantages__swiper-image-container">
+                <img
+                  class="advantages__swiper-image"
+                  src="src/images/slider-image3.png"
+                  alt="advantages background"
+                />
+              </div>
+
+              <div class="advantages__swiper-slide-container">
+                <div class="advantages__swiper-slide-content">
+                  <div class="box">
+                    <div class="progress" id="swiper-slide-progress3">
+                      <div class="inner">3/4</div>
+                    </div>
+                  </div>
+
+                  <div class="advantages__swiper-slide-info">
+                    <div class="advantages__swiper-slide-title">
+                      <h2>Розвинута транспортна розв'язка</h2>
+                    </div>
+
+                    <div class="advantages__swiper-slide-description">
+                      <p>
+                        Добирайтесь до центра Києва за 40 хвилин, а поруч
+                        знаходится все необхідне для комфортного життя.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="advantages__button button">
+                    <a href="#" class="button__link"> Обрати квартиру </a>
+
+                    <img
+                      class="button__icon"
+                      src="src/images/icons/arrow-right.svg"
+                      alt="right arrow"
+                    />
                   </div>
                 </div>
               </div>
@@ -605,63 +677,209 @@
                 />
               </div>
 
-              <div class="page__container advantages__swiper-container">
-                <div class="advantages__titles">
-                  <h4 class="advantages__subtitle">
-                    Житловий комплекс “Dream House”
-                  </h4>
-
-                  <h1 class="advantages__title">
-                    Смарт квартира 22м² в Крюковщині
-                  </h1>
-
-                  <h4 class="advantages__subtitle">
-                    Від
-                    <span class="advantages__subtitle--price"
-                      >16 500&#36;</span
-                    >
-                  </h4>
-                </div>
-
-                <div class="advantages__button button">
-                  <a href="#" class="button__link"> Обрати квартиру </a>
-
-                  <img
-                    class="button__icon"
-                    src="src/images/icons/arrow-right.svg"
-                    alt="right arrow"
-                  />
-                </div>
-
-                <div class="advantages__descriptions">
-                  <div class="advantages__description">
-                    <div class="advantages__description-icon-container">
-                      <img
-                        class="advantages__description-icon"
-                        src="src/images/icons/compass.svg"
-                        alt="compass"
-                      />
+              <div class="advantages__swiper-slide-container">
+                <div class="advantages__swiper-slide-content">
+                  <div class="box">
+                    <div class="progress" id="swiper-slide-progress4">
+                      <div class="inner">4/4</div>
                     </div>
-
-                    <h4 class="advantages__subtitle">10 хвилин до Києва</h4>
                   </div>
 
-                  <div class="advantages__description">
-                    <div class="advantages__description-icon-container">
-                      <img
-                        class="advantages__description-icon"
-                        src="src/images/icons/location.svg"
-                        alt="location"
-                      />
+                  <div class="advantages__swiper-slide-info">
+                    <div class="advantages__swiper-slide-title">
+                      <h2>Розвинута інфраструктура</h2>
                     </div>
 
-                    <h4 class="advantages__subtitle">Ліс в 2 хвилинах</h4>
+                    <div class="advantages__swiper-slide-description">
+                      <p>
+                        Всередині комплексу знаходяться зони для відпочинку,
+                        дитячий майданчик, кафе, невеличкий супермаркет, та
+                        зелені зони.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="advantages__button button">
+                    <a href="#" class="button__link"> Обрати квартиру </a>
+
+                    <img
+                      class="button__icon"
+                      src="src/images/icons/arrow-right.svg"
+                      alt="right arrow"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        </div>
+
+        <div class="box box-mobile">
+          <div class="progress" id="swiper-mobile-slide-progress">
+            <div class="inner">1/4</div>
+          </div>
+        </div>
+
+        <div class="advantages__swiper-mobile-container">
+          <div class="swiper advantages__swiper-mobile">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide advantages__swiper-mobile-slide">
+                <div class="advantages__swiper-mobile-image-container">
+                  <img
+                    class="advantages__swiper-mobile-image"
+                    src="src/images/slider-image1.png"
+                    alt="advantages background"
+                  />
+                </div>
+  
+                <div class="advantages__swiper-mobile-slide-container">
+                  <div class="advantages__swiper-mobile-slide-content">
+                    <div class="advantages__swiper-mobile-slide-info">
+                      <div class="advantages__swiper-mobile-slide-title">
+                        <h2>Життя в оточенні природи</h2>
+                      </div>
+  
+                      <div class="advantages__swiper-mobile-slide-description">
+                        <p>
+                          Прокидайтеся вранці під спів птахів та шелест дерев.
+                          Також ви можете насолодитися гармонією природи після
+                          продуктивного рабочого дня, адже до лісу 2 хвилини від
+                          комплексу.
+                        </p>
+                      </div>
+                    </div>
+  
+                    <div class="advantages__button button">
+                      <a href="#" class="button__link"> Обрати квартиру </a>
+  
+                      <img
+                        class="button__icon"
+                        src="src/images/icons/arrow-right.svg"
+                        alt="right arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide advantages__swiper-mobile-slide">
+                <div class="advantages__swiper-mobile-image-container">
+                  <img
+                    class="advantages__swiper-mobile-image"
+                    src="src/images/slider-image2.png"
+                    alt="advantages background"
+                  />
+                </div>
+  
+                <div class="advantages__swiper-mobile-slide-container">
+                  <div class="advantages__swiper-mobile-slide-content">
+                    <div class="advantages__swiper-mobile-slide-info">
+                      <div class="advantages__swiper-mobile-slide-title">
+                        <h2>Смарт квартири з ефективним використанням площі</h2>
+                      </div>
+  
+                      <div class="advantages__swiper-mobile-slide-description">
+                        <p>
+                          За рахунок архітектурних рішень та розумних планувань
+                          квартири, простір використовується найбільш ефективно.
+                          Нічого зайвого
+                        </p>
+                      </div>
+                    </div>
+  
+                    <div class="advantages__button button">
+                      <a href="#" class="button__link"> Обрати квартиру </a>
+  
+                      <img
+                        class="button__icon"
+                        src="src/images/icons/arrow-right.svg"
+                        alt="right arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide advantages__swiper-mobile-slide">
+                <div class="advantages__swiper-mobile-image-container">
+                  <img
+                    class="advantages__swiper-mobile-image"
+                    src="src/images/slider-image3.png"
+                    alt="advantages background"
+                  />
+                </div>
+  
+                <div class="advantages__swiper-mobile-slide-container">
+                  <div class="advantages__swiper-mobile-slide-content">
+                    <div class="advantages__swiper-mobile-slide-info">
+                      <div class="advantages__swiper-mobile-slide-title">
+                        <h2>Розвинута транспортна розв'язка</h2>
+                      </div>
+  
+                      <div class="advantages__swiper-mobile-slide-description">
+                        <p>
+                          Добирайтесь до центра Києва за 40 хвилин, а поруч
+                          знаходится все необхідне для комфортного життя.
+                        </p>
+                      </div>
+                    </div>
+  
+                    <div class="advantages__button button">
+                      <a href="#" class="button__link"> Обрати квартиру </a>
+  
+                      <img
+                        class="button__icon"
+                        src="src/images/icons/arrow-right.svg"
+                        alt="right arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide advantages__swiper-mobile-slide">
+                <div class="advantages__swiper-mobile-image-container">
+                  <img
+                    class="advantages__swiper-mobile-image"
+                    src="src/images/main-background.png"
+                    alt="advantages background"
+                  />
+                </div>
+  
+                <div class="advantages__swiper-mobile-slide-container">
+                  <div class="advantages__swiper-mobile-slide-content">
+                    <div class="advantages__swiper-mobile-slide-info">
+                      <div class="advantages__swiper-mobile-slide-title">
+                        <h2>Розвинута інфраструктура</h2>
+                      </div>
+  
+                      <div class="advantages__swiper-mobile-slide-description">
+                        <p>
+                          Всередині комплексу знаходяться зони для відпочинку,
+                          дитячий майданчик, кафе, невеличкий супермаркет, та
+                          зелені зони.
+                        </p>
+                      </div>
+                    </div>
+  
+                    <div class="advantages__button button">
+                      <a href="#" class="button__link"> Обрати квартиру </a>
+  
+                      <img
+                        class="button__icon"
+                        src="src/images/icons/arrow-right.svg"
+                        alt="right arrow"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination advantages__swiper-pagination"></div>
 
         <div class="advantages__swiper-buttons-wrapper">
           <div class="advantages__swiper-buttons">
@@ -672,54 +890,6 @@
             <div class="swiper-button-next advantages__swiper-button-next">
               <img src="src/images/icons/arrow-swiper.svg" alt="arrow" />
             </div>
-
-            <div class="advantages__presentation-container">
-              <div class="advantages__presentation-image-container">
-                <img
-                  src="src/images/book-mockup.png"
-                  class="advantages__presentation-image"
-                  alt="book mockup"
-                />
-              </div>
-
-              <div class="advantages__presentation-content">
-                <div class="advantages__presentation-titles">
-                  <div class="advantages__presentation-title-container">
-                    <h3 class="advantages__presentation-title">
-                      Презентація комплексу
-                    </h3>
-                  </div>
-
-                  <div class="advantages__presentation-subtitle-container">
-                    <h4 class="advantages__presentation-subtitle">
-                      Документ PDF, 18.6 mb
-                    </h4>
-                  </div>
-                </div>
-
-                <div class="advantages__presentation-download">
-                  <a
-                    href="src/files/presentation.pdf"
-                    download="presentation"
-                    class="advantages__presentation-download-link"
-                  >
-                    <div
-                      class="advantages__presentation-download-icon-container"
-                    >
-                      <img
-                        src="src/images/icons/download.svg"
-                        class="advantages__presentation-download-icon"
-                        alt="download"
-                      />
-                    </div>
-
-                    <div class="advantages__presentation-subtitle-container">
-                      <p class="advantages__presentation-subtitle">Скачати</p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -727,6 +897,7 @@
 
     <footer class="page__footer footer"></footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>

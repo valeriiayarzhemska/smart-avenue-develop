@@ -9,6 +9,10 @@
       padding: 0 3rem;
     }
 
+    @include onTablet {
+      padding: 0 2.5rem;
+    }
+
     /* @include onDesktopMiddle {
       padding: 0 15rem;
     }
@@ -16,5 +20,15 @@
     @include onDesktopWide {
       padding: 0 21rem;
     } */
+  }
+
+  &__container--tablet {
+    @include onTablet {
+      padding: 0 3rem;
+    }
+
+    @include onTablet {
+      padding: 0 2.5rem;
+    }
   }
 }

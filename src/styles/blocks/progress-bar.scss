@@ -1,0 +1,44 @@
+@import "../utils/mixins";
+@import "../utils/vars";
+
+.box {
+  display: inline-block;
+
+  &-mobile {
+    display: none;
+  
+    @include onPhone {
+      display: inline-block;
+      margin-bottom: 3.7rem;
+    }
+  }
+}
+
+.progress {
+  @include flexJustifyAlignCenter;
+  position: relative;
+  width: 7.2rem;
+  height: 7.2rem;
+}
+
+.progress > .inner {
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  color: $black-color;
+  
+  @include onTablet {
+    color: $white-color;
+  }
+
+  @include onPhone {
+    color: $black-color;
+  }
+}
+
+.progress > svg {
+  display: block;
+  height: 100%;
+}
