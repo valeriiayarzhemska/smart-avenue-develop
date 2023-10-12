@@ -7,6 +7,7 @@ function addTextProgressBar(indexSlide) {
 }
 
 function startAnimation(progressBar) {
+  progressBar.set(0);
   progressBar.animate(1);
 }
 
@@ -37,18 +38,6 @@ function createProgressCircle(progressId, type) {
   }
 }
 
-window.onload = function () {
-  createProgressCircle('#swiper-slide-progress1');
-  startAnimation(progressBarArray[0]);
-
-  createProgressCircle('#swiper-slide-progress2');
-  createProgressCircle('#swiper-slide-progress3');
-  createProgressCircle('#swiper-slide-progress4');
-
-  createProgressCircle('#swiper-mobile-slide-progress', progressBarType.mobile);
-  startAnimation(progressBarMobile);
-};
-
 const mainSwiper = new Swiper('.main-screen__swiper', {
   direction: 'horizontal',
   loop: true,
@@ -67,13 +56,12 @@ const advantagesSwiper = new Swiper('.advantages__swiper', {
     disableOnInteraction: false,
   },
   on: {
-    slideNextTransitionEnd: function () {
+    slideChange: function () {
       const slideIndex = this.realIndex;
       const slideNextIndex = slideIndex !== 0 ? slideIndex - 1 : slideIndex + 1;
 
       startAnimation(progressBarArray[slideIndex]);
       stopAnimation(progressBarArray[slideNextIndex]);
-      addTextProgressBar(slideIndex + 1);
     },
   },
 
@@ -97,8 +85,6 @@ const advantagesSwiperMobile = new Swiper('.advantages__swiper-mobile', {
   on: {
     slideChange: function () {
       addTextProgressBar(this.realIndex + 1);
-    },
-    slideNextTransitionEnd: function () {
       stopAnimation(progressBarMobile);
       startAnimation(progressBarMobile);
     },
@@ -113,3 +99,45 @@ const advantagesSwiperMobile = new Swiper('.advantages__swiper-mobile', {
     prevEl: '.advantages__swiper-button-prev',
   },
 });
+
+const informationSwiper = new Swiper('.information__swiper', {
+  direction: 'horizontal',
+  loop: true,
+
+  pagination: {
+    el: '.information__swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.information__swiper-button-next',
+    prevEl: '.information__swiper-button-prev',
+  },
+});
+
+const gallerySwiper = new Swiper('.gallery__swiper', {
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
+
+  pagination: {
+    el: '.gallery__swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.gallery__swiper-button-next',
+    prevEl: '.gallery__swiper-button-prev',
+  },
+});
+
+window.onload = function () {
+  createProgressCircle('#swiper-slide-progress1');
+  startAnimation(progressBarArray[0]);
+
+  createProgressCircle('#swiper-slide-progress2');
+  createProgressCircle('#swiper-slide-progress3');
+  createProgressCircle('#swiper-slide-progress4');
+
+  createProgressCircle('#swiper-mobile-slide-progress', progressBarType.mobile);
+  startAnimation(progressBarMobile);
+};

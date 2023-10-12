@@ -1,34 +1,33 @@
 @import "../utils/mixins";
 @import "../utils/vars";
 
-.advantages {
+.gallery {
   position: relative;
-  margin-bottom: 9rem;
+  margin-bottom: 8.8rem;
   overflow: hidden;
 
   @include onTablet {
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
   }
 
-  &__container-swiper {
-    display: block;
-
-    @include onPhone {
-      display: none;
-    }
+  @include onPhone {
+    margin-bottom: 6rem;
   }
 
   &__swiper {
-    height: 72rem;
+    height: 70rem;
 
     @include onTablet {
-      height: 63rem;
+      height: 45rem;
+    }
+
+    @include onPhone {
+      height: 57rem;
     }
 
     &-image-container {
       display: flex;
-      position: absolute;
-      width: 94.8rem;
+      width: 100%;
       height: 67rem;
       top: 0;
       left: 0;
@@ -45,16 +44,19 @@
       height: 100%;
       object-fit: cover;
       object-position: center;
+
+      @include onTablet {
+        object-position: bottom;
+      }
     }
 
-    &-container {
+    /* &-container {
       @include flexColumn;
       gap: 3rem;
       position: relative;
-    }
+    } */
 
-    &-pagination,
-    &-pagination-mobile {
+    &-pagination {
       display: none;
       z-index: 2 !important;
     }
@@ -63,20 +65,6 @@
       @include onTablet {
         display: block;
         bottom: 2rem !important;
-      }
-
-      @include onPhone {
-        display: none;
-      }
-    }
-
-    &-pagination-mobile {
-      @include onPhone {
-        display: block;
-        margin-left: 12rem;
-        width: auto !important;
-        height: 1.4rem;
-        top: 3rem !important;
       }
     }
 
@@ -88,26 +76,23 @@
       }
     }
 
-    &-pagination-mobile > .swiper-pagination-bullet {
-      @include onPhone {
-        width: 0.8rem;
-        height: 0.8rem;
-        background-color: $light-gray-color;
-      }
-    }
-
-    &-pagination > .swiper-pagination-bullet-active,
-    &-pagination-mobile > .swiper-pagination-bullet-active {
+    &-pagination > .swiper-pagination-bullet-active {
       background-color: $main-red-color;
     }
 
     &-buttons-wrapper {
       position: absolute;
-      left: 72rem;
-      bottom: 0;
+      bottom: -2rem;
+      right: 25.2rem;
 
-      @include onTablet {
-        justify-content: flex-start;
+      @include onDesktopSmall {
+        bottom: -1.9rem;
+        right: 24.8rem;
+      }
+
+      @include onDesktopMini {
+        bottom: -2.1rem;
+        right: 26.5rem;
       }
     }
 
@@ -133,7 +118,7 @@
     &-button-next {
       width: 7.2rem !important;
       height: 7.4rem !important;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(0, 0, 0, 0.4);
 
       @include onTablet {
         display: none !important;
@@ -156,25 +141,29 @@
     }
 
     &-slide {
+      width: 88% !important;
+    }
+
+    /* &-slide {
       position: relative;
     
       &-container {
         position: absolute;
-        bottom: 4.9rem;
-        left: 87.3rem;
-        padding: 6rem 0 0 7rem;
-        height: 60rem;
+        bottom: 10.6rem;
+        left: 66.3rem;
+        padding: 12.4rem 7rem 0;
+        height: 52rem;
         z-index: 1;
         background-color: $white-color;
   
         @include onDesktopSmall {
-          top: 7.1rem;
-          left: 87.3rem;
+          top: 7.6rem;
+          left: 66.45rem;
         }
   
         @include onDesktopMini {
-          top: 6.9rem;
-          left: 87.6rem;
+          top: 7.4rem;
+          left: 66.7rem;
         }
   
         @include onTablet {
@@ -182,9 +171,13 @@
           left: 0;
           width: 100%;
           max-width: 100%;
-          height: 63rem;
-          padding: 13rem 5rem 14rem;
+          padding: 10rem 6rem 12rem;
           background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        @include onPhone {
+          padding: 8rem 3.5rem 0 3.5rem;
+          height: 100%;
         }
       }
   
@@ -215,7 +208,7 @@
       &-info {
         @include flexColumn;
         gap: 3rem;
-        max-width: 40rem;
+        max-width: 52.6rem;
 
         @include onTablet {
           max-width: none;
@@ -224,13 +217,18 @@
   
       &-title > h2 {
         font-family: "Montserrat", sans-serif;
-        font-size: 2.8rem;
+        font-size: 3.4rem;
         font-weight: 700;
-        line-height: 3.9rem;
+        line-height: 4.8rem;
         color: $black-color;
   
         @include onTablet {
           color: $white-color;
+        }
+
+        @include onPhone {
+          font-size: 2.6rem;
+          line-height: 3.6rem;
         }
       }
   
@@ -245,55 +243,6 @@
           color: $white-color;
         }
       }
-    }
-  }
-
-  &__swiper-mobile-container {
-    display: none;
-
-    @include onPhone {
-      display: block;
-    }
-  }
-
-  &__swiper-mobile {
-    &-image-container {
-      margin-bottom: 3.7rem;
-      width: 100%;
-      height: 18rem;
-    }
-
-    &-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    &-slide {
-      &-content {
-        @include flexColumnAlignStart;
-        gap: 3.5rem;
-      }
-
-      &-info {
-        @include flexColumnAlignStart;
-        gap: 3rem;
-      }
-
-      &-title > h2 {
-        font-size: 3rem;
-        font-weight: 700;
-        line-height: 4.2rem;
-        color: $black-color;
-      }
-
-      &-description > p {
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 2.9rem;
-        color: $dark-gray-color;
-      }
-    }
+    } */
   }
 }

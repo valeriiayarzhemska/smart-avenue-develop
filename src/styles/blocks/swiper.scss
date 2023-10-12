@@ -18,6 +18,11 @@
   background-image: url("../../images/icons/arrow-swiper.svg") !important;
 } */
 
+.swiper-button-prev,
+.swiper-button-next {
+  z-index: 2 !important;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: "";

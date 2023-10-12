@@ -3,15 +3,25 @@
 
 .button {
   @include inlineFlexJustifyAlignCenter;
-  gap: 1.5rem;
-  padding: 1.8rem 2.2rem;
-  max-width: 23rem;
+  max-width: 21.5rem;
   background: $main-red-color;
+  cursor: pointer;
+
+  @include onDesktopSmall {
+    max-width: 23rem;
+  }
+
+  @include onTablet {
+    max-width: 21.5rem;
+  }
 
   &__link {
+    @include inlineFlexJustifyAlignCenter;
+    gap: 1.5rem;
+    padding: 1.8rem 2.2rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 2rem;
     color: $white-color;
   }
