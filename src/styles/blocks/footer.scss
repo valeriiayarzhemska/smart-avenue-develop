@@ -1,0 +1,38 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.footer {
+  background: #000;
+  &__content {
+    display: flex;
+
+    &-block {
+      display: flex;
+    }
+  }
+
+  &__title > h5,
+  &__list-title > h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    color: $white-color;
+  }
+
+  &__subtitle > h6,
+  &__link,
+  &__info-description > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    color: $white-color;
+    opacity: 0.6;
+  }
+
+  &__link:hover,
+  &__info-description:hover > p {
+    opacity: 0.8;
+  }
+}

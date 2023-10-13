@@ -4,7 +4,6 @@
 .information {
   position: relative;
   margin-bottom: 8.8rem;
-  overflow: hidden;
 
   @include onTablet {
     margin-bottom: 8rem;
@@ -207,7 +206,6 @@
       }
   
       &-title > h2 {
-        font-family: "Montserrat", sans-serif;
         font-size: 3.4rem;
         font-weight: 700;
         line-height: 4.8rem;

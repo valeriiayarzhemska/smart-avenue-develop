@@ -1,5 +1,5 @@
-@import "../utils/mixins";
-@import "../utils/vars";
+@import '../utils/mixins';
+@import '../utils/vars';
 
 .button {
   @include inlineFlexJustifyAlignCenter;
@@ -24,5 +24,47 @@
     font-weight: 700;
     line-height: 2rem;
     color: $white-color;
+  }
+
+  &__link > img {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.button-transparent {
+  @include inlineFlexJustifyAlignCenter;
+  max-width: 16.8rem;
+  cursor: pointer;
+
+  @include onDesktopSmall {
+    max-width: 23rem;
+  }
+
+  @include onTablet {
+    max-width: 21.5rem;
+  }
+
+  &__link {
+    @include inlineFlexJustifyAlignCenter;
+    gap: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    color: $main-red-color;
+  }
+
+  &__link--gray {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: $gray-disabled-color;
+  }
+
+  &__link > img {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }

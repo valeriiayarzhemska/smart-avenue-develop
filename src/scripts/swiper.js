@@ -100,6 +100,19 @@ const advantagesSwiperMobile = new Swiper('.advantages__swiper-mobile', {
   },
 });
 
+const newsSwiper = new Swiper('.news__swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    666: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
 const informationSwiper = new Swiper('.information__swiper', {
   direction: 'horizontal',
   loop: true,
