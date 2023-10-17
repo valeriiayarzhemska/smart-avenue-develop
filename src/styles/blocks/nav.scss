@@ -291,10 +291,10 @@ a.nav-mobile__item--subtitle {
 }
 
 #nav__tablet__additional {
-  display: none;
+  display: flex;
 
   @include onTabletDesign {
-    display: flex;
+    display: none;
   }
 
   & .nav__link--additional {

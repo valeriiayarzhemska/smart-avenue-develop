@@ -47,7 +47,7 @@
             </li>
 
             <li class="nav__item nav__item--underline">
-              <a href="#about-screen" class="nav__link">Про комплекс</a>
+              <a href="#advantages-screen" class="nav__link">Про комплекс</a>
             </li>
 
             <li class="nav__item nav__item--underline">
@@ -86,7 +86,7 @@
                 <div class="nav__item--additional-geo">
                   <div class="nav__item--subtitles">
                     <p class="nav__item--subtitle">Адреса</p>
-                    <a href="#contacts" class="nav__item--subtitle">
+                    <a href="#location-screen" class="nav__item--subtitle">
                       Як проїхати?
                     </a>
                   </div>
@@ -162,7 +162,7 @@
                 <div class="nav__item--additional-geo">
                   <div class="nav__item--subtitles">
                     <p class="nav__item--subtitle">Адреса</p>
-                    <a href="#contacts" class="nav__item--subtitle">
+                    <a href="#location-screen" class="nav__item--subtitle">
                       Як проїхати?
                     </a>
                   </div>
@@ -193,7 +193,7 @@
               </li>
 
               <li class="nav-mobile__item nav-mobile__item--underline">
-                <a href="#about" class="nav-mobile__link">Про комплекс</a>
+                <a href="#advantages-screen" class="nav-mobile__link">Про комплекс</a>
               </li>
 
               <li class="nav-mobile__item nav-mobile__item--underline">
@@ -205,7 +205,7 @@
               </li>
 
               <li class="nav-mobile__item nav-mobile__item--underline">
-                <a href="#news" class="nav-mobile__link">Новини</a>
+                <a href="#news-screen" class="nav-mobile__link">Новини</a>
               </li>
             </ul>
 
@@ -218,7 +218,7 @@
                 <div class="nav-mobile__item--additional-geo">
                   <div class="nav-mobile__item--subtitles">
                     <p class="nav-mobile__item--subtitle">Адреса</p>
-                    <a href="#contacts" class="nav-mobile__item--subtitle">
+                    <a href="#location-screen" class="nav-mobile__item--subtitle">
                       Як проїхати?
                     </a>
                   </div>
@@ -1539,6 +1539,174 @@
           <div class="swiper-pagination gallery__swiper-pagination"></div>
         </div>
       </section>
+
+      <section id="location-screen" class="location page__container">
+        <div class="location__form-container">
+          <div class="location__form-title">
+            <h2>
+              Зв'язатися з нами
+            </h2>
+          </div>
+
+          <form
+            id="form"
+            action=""
+            method="post"
+            class="location__form"
+          >
+            <div class="location__form-inputs-container">
+              <div class="location__form-input-label-container">
+                <label for="name" class="location__form-label">Як до Вас звертатися? *</label>
+                
+                
+                <div class="location__form-input-container">
+                  <input id="name" name="name" placeholder="Ввести" />
+
+                  <span class="location__form-input-error location__form-has-error">
+                    <img 
+                      src="src/images/icons/input-error-icon.svg"
+                    />
+                  </span>
+                </div>
+              </div>
+  
+              <div class="location__form-input-label-container location__form-input-label-container--phone">
+                <label for="phone" class="location__form-label">Телефон *</label>
+  
+                <div class="location__form-phone-placeholder">
+                  <span>&#127482;&#127462;380</span>
+                </div>
+                
+                <div class="location__form-input-container location__form-input-container--phone">
+                  <input
+                    id="phone"
+                    name="phone"
+                    placeholder="(ХХ) ХХ ХХ ХХХ"
+                    class="location__form-phone-input"
+                  />
+
+                  <span class="location__form-input-error location__form-has-error">
+                    <img 
+                      src="src/images/icons/input-error-icon.svg"
+                    />
+                  </span>
+                </div>
+              </div>
+  
+              <div class="location__form-input-label-container">
+                <label for="message" class="location__form-label">Повідомлення</label>
+                
+                <div class="location__form-input-container location__form-input-container--message">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Ввести"
+                  ></textarea>
+
+                  <span class="location__form-input-error location__form-has-error">
+                    <img 
+                      src="src/images/icons/input-error-icon.svg"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="location__form-sumbit-container">
+              <span class="location__form-agreement">
+                Заповнюючи дану форму ви погоджуєтесь з політикою конфіденційності.
+                </br>
+                Всі поля з * - обов'язкові до заповнення
+              </span>
+
+              <input class="submit button location__form-button" type="submit" value="Відправити" />
+            </div>
+          </form>
+
+          <div class="location__form-popup"
+          style="display: none; padding: 0; border-radius: 1.3rem;">
+            <div class="location__form-popup-content">
+              <div class="location__form-popup-image">
+                <img
+                  src="src/images/main-background.png"
+                  alt="buildings"
+                >
+              </div>
+
+              <div class="location__form-popup-info">
+                <div class="location__form-popup-title">
+                  <h3>Дякуємо за ваше звернення!</h3>
+                </div> 
+  
+                <div class="location__form-popup-text">
+                  <p>Наш менеджер скоро звʼяжеться з вами</p>
+                </div>
+  
+                <div class="location__form-popup-button-container">
+                  <a
+                    href="#location-screen"
+                    data-src="#subscribe-popup"
+                    data-fancybox
+                    class="button location__form-popup-button"
+                  >
+                    Продовжити
+                  </a>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="map-popup" class="location__map-popup">
+          <div class="location__map-popup-title">
+            <h5>Житловий комплекс “Dream House”</h5>
+          </div>
+
+          <ul class="location__map-popup-list">
+            <li class="location__map-popup-item location__map-popup-item--location">
+              <img src="src/images/icons/geo-gray.svg" alt="geo icon" />
+
+              <div class="location__map-popup-link">
+                <a href="#location-screen">
+                  с.Крюковщина 191, Київська область
+                </a>
+              </div>
+            </li>
+  
+            <li class="location__map-popup-item">
+              <img src="src/images/icons/phone-gray.svg" alt="phone icon" />
+
+              <div class="location__map-popup-link">
+                <a href="tel:+380992337999">
+                  +380 (99) 2337 999
+                </a>
+              </div>
+            </li>
+
+            <li class="location__map-popup-item">
+              <img src="src/images/icons/email-gray.svg" alt="email icon" />
+
+              <div class="location__map-popup-link">
+                <a href="mailto:sales@domail.com">
+                  sales@domail.com
+                </a>
+              </div>
+            </li>
+
+            <li class="location__map-popup-item">
+              <img src="src/images/icons/time-gray.svg" alt="hours icon" />
+
+              <div class="location__map-popup-link">
+                <p>
+                  08:00 – 18:00
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
 
     <footer class="page__footer footer">
@@ -1552,174 +1720,191 @@
         </div>
       </div>
 
-      <div class="footer__content">
-        <div class="footer__content-block">
-          <div class="footer__nav">
-            <div class="footer__list-title">
-              <h5>Навігація</h5>
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__content-blocks">
+            <div class="footer__nav footer__content-block">
+              <div class="footer__list-title">
+                <h5>Навігація</h5>
+              </div>
+    
+              <ul class="footer__list footer__list--nav">
+                <li class="footer__item">
+                  <a href="#advantages-screen" class="footer__link">Про комплекс</a>
+                </li>
+      
+                <li class="footer__item">
+                  <a href="#location-screen" class="footer__link">Розташування</a>
+                </li>
+      
+                <li class="footer__item">
+                  <a href="#planning-screen" class="footer__link">Планування</a>
+                </li>
+      
+                <li class="footer__item">
+                  <a href="#gallery-screen" class="footer__link">Галерея</a>
+                </li>
+      
+                <li class="footer__item">
+                  <a href="#information-screen" class="footer__link">Хід будівництва</a>
+                </li>
+              </ul>
             </div>
-  
-            <ul class="footer__list footer__list--nav">
-              <li class="footer__item">
-                <a href="#" class="footer__link">Про комплекс</a>
-              </li>
     
-              <li class="footer__item">
-                <a href="#location-screen" class="footer__link">Розташування</a>
-              </li>
+            <div class="footer__news footer__content-block">
+              <div class="footer__list-title">
+                <h5>Останні новини</h5>
+              </div>
     
-              <li class="footer__item">
-                <a href="#planning-screen" class="footer__link">Планування</a>
-              </li>
+              <ul class="footer__list footer__list--news">
+                <li class="footer__item">
+                  <a href="#news-screen" class="footer__link">
+                    <span>5 вересня, 2021 в 17:04</span>
+                    Закінчено фінальний поверх будівництва
+                  </a>
+                </li>
+      
+                <li class="footer__item">
+                  <a href="#news-screen" class="footer__link">
+                    <span>5 вересня, 2021 в 17:04</span>
+                    Креслення комплексу було затверджено Укрстандарту
+                  </a>
+                </li>
     
-              <li class="footer__item">
-                <a href="#gallery-screen" class="footer__link">Галерея</a>
-              </li>
-    
-              <li class="footer__item">
-                <a href="#information-screen" class="footer__link">Хід будівництва</a>
-              </li>
-            </ul>
+                <li class="footer__item">
+                  <a href="#news-screen" class="footer__link">
+                    <span>5 вересня, 2021 в 17:04</span>
+                    Фінальне будівництво даху майже на фініші
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
   
-          <div class="footer__news">
-            <div class="footer__list-title">
-              <h5>Останні новини</h5>
-            </div>
-  
-            <ul class="footer__list footer__list--nav">
-              <li class="footer__item">
-                <a href="#news-screen" class="footer__link">
-                  <span>5 вересня, 2021 в 17:04</span>
-                  Закінчено фінальний поверх будівництва
-                </a>
-              </li>
+          <div class="footer__content-blocks">
+            <div class="footer__contacts footer__content-block">
+              <div class="footer__list-title">
+                <h5>Контакти</h5>
+              </div>
     
-              <li class="footer__item">
-                <a href="#news-screen" class="footer__link">
-                  <span>5 вересня, 2021 в 17:04</span>
-                  Креслення комплексу було затверджено Укрстандарту
-                </a>
-              </li>
-  
-              <li class="footer__item">
-                <a href="#news-screen" class="footer__link">
-                  <span>5 вересня, 2021 в 17:04</span>
-                  Фінальне будівництво даху майже на фініші
-                </a>
-              </li>
-            </ul>
+              <ul class="footer__list footer__list--contacts">
+                <li class="footer__item footer__item--contacts">
+                  <div class="footer__item--contacts-info">
+                    <img src="src/images/icons/geo-gray.svg" alt="geo icon" />
+      
+                    <div class="footer__link footer__link--contacts">
+                      <a href="#location-screen">
+                        с.Крюковщина 191, Київська область
+                      </a>
+                    </div>
+                  </div>
+                </li>
+      
+                <li class="footer__item footer__item--contacts">
+                  <div class="footer__item--contacts-info">
+                    <img src="src/images/icons/phone-gray.svg" alt="phone icon" />
+      
+                    <div class="footer__link footer__link--contacts">
+                      <a href="tel:+380992337999">
+                        +380 (99) 2337 999
+                      </a>
+                    </div>
+                  </div>
+                </li>
+    
+                <li class="footer__item footer__item--contacts">
+                  <div class="footer__item--contacts-info">
+                    <img src="src/images/icons/email-gray.svg" alt="email icon" />
+      
+                    <div class="footer__link footer__link--contacts">
+                      <a href="mailto:sales@domail.com">
+                        sales@domail.com
+                      </a>
+                    </div>
+                  </div>
+                </li>
+    
+                <li class="footer__item footer__item--contacts">
+                  <div class="footer__item--contacts-info">
+                    <img src="src/images/icons/time-gray.svg" alt="hours icon" />
+      
+                    <div class="footer__link footer__link--contacts">
+                      <p>
+                        08:00 – 18:00
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+    
+              <div class="footer__social">
+                <div class="footer__list-subtitle">
+                  <h6>Ми у соціальних мережах</h6>
+                </div>
+    
+                <div class="footer__social-links">
+                  <a
+                    href="https://www.instagram.com/"
+                    class="footer__social-icon-link"
+                  >
+                    <img src="src/images/icons/inst.svg" alt="instagram" />
+                  </a>
+      
+                  <a
+                    href="https://facebook.com/"
+                    class="footer__social-icon-link"
+                  >
+                    <img src="src/images/icons/fb.svg" alt="facebook" />
+                  </a>
+      
+                  <a
+                    href="https://youtube.com/"
+                    class="footer__social-icon-link"
+                  >
+                    <img src="src/images/icons/yt.svg" alt="youtube" />
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <div class="footer__info footer__content-block">
+              <div class="footer__list-title">
+                <h5>Юридична інформація</h5>
+              </div>
+    
+              <div class="footer__info-description">
+                <p>
+                  Договір про будівництво згідно з рішенням обласної ради будівельників указу
+                  від 01.04.19 ТМНСЦ України для разрешения стройки жилого будинку текст приклад
+                </p>
+    
+                <p>
+                  Головний офіс забудовника: вул. Якірна, г. Киев, тел 380992337999,
+                  пошта example@stroitel-group.ua
+                </p>
+              </div>          
+            </div>
           </div>
         </div>
-
-        <div class="footer__content-block">
-          <div class="footer__contacts">
-            <div class="footer__list-title">
-              <h5>Контакти</h5>
-            </div>
   
-            <ul class="footer__list footer__list--contacts">
-              <li class="footer__item footer__item--contacts">
-                <div class="footer__item--contacts-info">
-                  <img src="src/images/icons/geo-gray.svg" alt="geo icon" />
-    
-                  <div class="footer__link footer__link--contacts">
-                    <a href="#location-screen">
-                      с.Крюковщина 191, Київська область
-                    </a>
-                  </div>
-                </div>
-              </li>
-    
-              <li class="footer__item footer__item--contacts">
-                <div class="footer__item--contacts-info">
-                  <img src="src/images/icons/phone-gray.svg" alt="phone icon" />
-    
-                  <div class="footer__link footer__link--contacts">
-                    <a href="tel:+380992337999">
-                      +380 (99) 2337 999
-                    </a>
-                  </div>
-                </div>
-              </li>
-  
-              <li class="footer__item footer__item--contacts">
-                <div class="footer__item--contacts-info">
-                  <img src="src/images/icons/email-gray.svg" alt="email icon" />
-    
-                  <div class="footer__link footer__link--contacts">
-                    <a href="mailto:sales@domail.com">
-                      sales@domail.com
-                    </a>
-                  </div>
-                </div>
-              </li>
-  
-              <li class="footer__item footer__item--contacts">
-                <div class="footer__item--contacts-info">
-                  <img src="src/images/icons/time-gray.svg" alt="hours icon" />
-    
-                  <div class="footer__link footer__link--contacts">
-                    <p>
-                      08:00 – 18:00
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-  
-            <div class="footer__social">
-              <div class="footer__list-subtitle">
-                <h6>Ми у соціальних мережах</h6>
-              </div>
-  
-              <a
-                href="https://www.instagram.com/"
-                class="footer__social-icon-link"
-              >
-                <img src="src/images/icons/inst.svg" alt="instagram" />
-              </a>
-  
-              <a
-                href="https://facebook.com/"
-                class="footer__social-icon-link"
-              >
-                <img src="src/images/icons/fb.svg" alt="facebook" />
-              </a>
-  
-              <a
-                href="https://youtube.com/"
-                class="footer__social-icon-link"
-              >
-                <img src="src/images/icons/yt.svg" alt="youtube" />
-              </a>
-            </div>
-          </div>
-  
-          <div class="footer__info">
-            <div class="footer__list-title">
-              <h5>Юридична інформація</h5>
-            </div>
-  
-            <div class="footer__info-description">
-              <p>
-                Договір про будівництво згідно з рішенням обласної ради будівельників указу
-                від 01.04.19 ТМНСЦ України для разрешения стройки жилого будинку текст приклад
-              </p>
-  
-              <p>
-                Головний офіс забудовника: вул. Якірна, г. Киев, тел 380992337999,
-                пошта example@stroitel-group.ua
-              </p>
-            </div>          
-          </div>
+        <div class="footer__rights">
+          <h6>
+            Всі права захищені законом України (с) 2021
+          </h6>
         </div>
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+      ({key: "AIzaSyAtPDk4277tA-gzDTzs4VOlNeDazPt1iQ0", v: "beta", language: "uk"});</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.0.1/progressbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
