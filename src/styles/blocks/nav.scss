@@ -24,18 +24,17 @@
     }
 
     &__image {
-      width: 100%;
-      height: 100%;
+      @include fullWidthHeight;
     }
   }
 
   &__list {
     @include flexJustifyAlignCenter;
-    gap: 3rem;
+    gap: $gap-big;
   }
 
   &__link {
-    font-size: 1.4rem;
+    font-size: $font-size-big;
     color: $white-color;
     opacity: 0.8;
   }
@@ -50,8 +49,8 @@
 
   &__link--additional {
     display: inline-block;
-    margin-top: 0.8rem;
-    font-size: 1.4rem;
+    margin-top: $margin-top-little;
+    font-size: $font-size-big;
   }
 
   &__item:not(:last-child) {
@@ -81,13 +80,13 @@
 
   &__item--underline > a:hover::after,
   li > a.active-nav::after {
-    width: 100%;
+    width: $full-width;
     background: $main-red-color;
   }
 
   &__item--additional {
     @include flexJustifyAlignEnd;
-    gap: 2rem;
+    gap: $gap-small;
     color: $white-color;
   }
 
@@ -106,14 +105,14 @@
 
   &__item--subtitles {
     @include flexJustifyAlignCenter;
-    gap: 0.8rem;
+    gap: $gap-tiniest;
   }
 
   &__item--subtitle {
     display: block;
     color: $white-color;
     opacity: 0.8;
-    font-size: 1.1rem;
+    font-size: $font-size-tiny;
   }
 
   &__item--scrolling {
@@ -122,15 +121,15 @@
 
   &__item--subtitle-language {
     position: absolute;
-    top: -0.8rem;
+    top: -0.9rem;
 
     @include onDesktopMini {
-     top: 0.3rem;
+      top: 0.3rem;
     }
 
     @include onTablet {
-      top: -0.8rem;
-     }
+      top: -1rem;
+    }
   }
 
   &__item--geolocation {
@@ -199,7 +198,7 @@ a.nav__item--subtitle {
   &__list {
     @include flexColumnJustifyAlignCenter;
     flex-grow: 1;
-    gap: 3rem;
+    gap: $gap-big;
   }
 
   &__link {
@@ -217,13 +216,13 @@ a.nav__item--subtitle {
 
   &__link--additional {
     display: block;
-    margin-top: 0.8rem;
-    font-size: 1.3rem;
+    margin-top: $margin-top-little;
+    font-size: $font-size-small;
   }
 
   &__delimeter {
     margin-bottom: 3rem;
-    width: 100%;
+    width: $full-width;
     height: 0.1rem;
     background: rgba(0, 0, 0, 0.1);
   }
@@ -238,7 +237,7 @@ a.nav__item--subtitle {
   &__item--additional-info-language,
   &__item--additional-info-phone {
     @include flexAlignEnd;
-    gap: 0.8rem;
+    gap: $gap-tiniest;
   }
 
   &__item--additional-language {
@@ -251,13 +250,13 @@ a.nav__item--subtitle {
 
   &__item--subtitles {
     @include flexJustifyAlignCenter;
-    gap: 0.8rem;
+    gap: $gap-tiniest;
   }
 
   &__item--subtitle {
     display: block;
     opacity: 0.8;
-    font-size: 1.1rem;
+    font-size: $font-size-tiny;
   }
 
   &__item--subtitle-language {
@@ -272,7 +271,7 @@ a.nav__item--subtitle {
 
   &__social {
     @include flexAlignCenter;
-    gap: 2rem;
+    gap: $gap-small;
 
     &-icon-link {
       @include flexJustifyAlignCenter;
@@ -281,7 +280,7 @@ a.nav__item--subtitle {
     }
 
     &-icon-link > img {
-      width: 100%;
+      width: $full-width;
     }
   }
 }

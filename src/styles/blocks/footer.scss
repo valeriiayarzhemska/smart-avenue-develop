@@ -60,22 +60,22 @@
 
     @include onTablet {
       flex-direction: column;
-      margin-bottom: 3rem;
+      margin-bottom: $margin-bottom-little;
     }
 
     @include onPhone {
       flex-direction: column;
-      gap: 3rem;
+      gap: $gap-big;
     }
 
     &-blocks {
       display: flex;
       flex: 1;
-      gap: 1.2rem;
+      gap: $gap-tiny;
 
       @include onPhone {
         flex-direction: column;
-        gap: 3rem;
+        gap: $gap-big;
       }
     }
 
@@ -88,51 +88,56 @@
     @include flexColumn;
 
     &-title > h5 {
-      margin-bottom: 2rem;
+      margin-bottom: $margin-bottom-tiny;
     }
 
     &-subtitle > h6 {
       margin-bottom: 1.4rem;
+      font-size: $font-size-small;
       font-weight: 700;
-      font-size: 1.3rem;
-      line-height: 2rem;
+      line-height: $line-height-tiny;
       color: $white-color;
       opacity: 0.8;
     }
   }
 
   &__list--nav {
-    gap: 1.2rem;
+    gap: $gap-tiny;
   }
 
   &__list--news {
-    gap: 1.5rem;
+    gap: $gap-little;
   }
 
   &__list--contacts {
     margin-bottom: 1rem;
-    gap: 0.8rem;
+    gap: $gap-tiniest;
   }
 
   &__title > h5,
   &__list-title > h5 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
     font-weight: 600;
-    line-height: 2.2rem;
+    line-height: $line-height-little;
     color: $white-color;
     opacity: 0.8;
   }
 
   &__subtitle > h6,
   &__link,
+  &__link--contacts > p,
   &__info-description > p {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
+    font-size: $font-size-small;
     font-weight: 400;
-    line-height: 2.2rem;
+    line-height: $line-height-little;
     color: $white-color;
     opacity: 0.4;
+  }
+
+  &__link--contacts > p {
+    color: $white-color;
+    opacity: 1;
   }
 
   &__link {
@@ -150,7 +155,7 @@
 
   &__item--contacts-info {
     @include flexAlignCenter;
-    gap: 0.8rem;
+    gap: $gap-tiniest;
   }
 
   &__link > span {
@@ -160,7 +165,7 @@
 
   &__info-description {
     @include flexColumn;
-    gap: 1.5rem;
+    gap: $gap-little;
 
     @include onTablet {
       max-width: 23rem;
@@ -174,7 +179,7 @@
   &__social {
     &-links {
       @include flexAlignCenter;
-      gap: 1.5rem;
+      gap: $gap-little;
     }
 
     &-icon-link {
@@ -184,14 +189,12 @@
     }
 
     &-icon-link > img {
-      width: 100%;
-      height: 100%;
+      @include fullWidthHeight;
     }
   }
 
   &__rights > h6 {
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: $font-size-tiny;
     line-height: 1.9rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.5);

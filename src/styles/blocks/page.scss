@@ -1,5 +1,5 @@
-@import "../utils/mixins";
-@import "../utils/vars";
+@import '../utils/mixins';
+@import '../utils/vars';
 
 .page {
   &__container {
@@ -9,17 +9,17 @@
       padding: 0 3rem;
     }
 
-    @include onTablet {
+    @include onPhone {
       padding: 0 2.5rem;
     }
+  }
 
-    /* @include onDesktopMiddle {
-      padding: 0 15rem;
+  &__container--desktop {
+    padding: 0 10rem;
+
+    @include onTablet {
+      padding: 0 0;
     }
-
-    @include onDesktopWide {
-      padding: 0 21rem;
-    } */
   }
 
   &__container--tablet {
@@ -27,7 +27,7 @@
       padding: 0 3rem;
     }
 
-    @include onTablet {
+    @include onPhone {
       padding: 0 2.5rem;
     }
   }

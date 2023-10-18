@@ -1,29 +1,46 @@
+'use strict';
+
+const positionMarker = { lat: 50.37050643116534, lng: 30.39561383862395 };
+const positionPopup = { 
+  desktop: {
+    lat: 50.37050643116534,
+    lng: 30.396255,
+  },
+  mobile: {
+    lat: 50.370312,
+    lng: 30.39561383862395,
+  },
+};
+const positionCenteredOfMap = { 
+  desktop: {
+    lat: 50.37050643116534,
+    lng: 30.39561383862395,
+  },
+  mobile: {
+    lat: 50.370052,
+    lng: 30.39561383862395,
+  },
+};
+const positions = getPositionBasedOnScreenWidth();
 let map;
 let marker;
 let popup;
 
 async function initMap() {
-  // The location of Uluru
-  const positionMarker = { lat: 50.37050643116534, lng: 30.39561383862395 };
-  // Request needed libraries.
-  //@ts-ignore
-  const { Map } = await google.maps.importLibrary("maps");
+  const { Map } = await google.maps.importLibrary('maps');
 
-  // The map, centered at Uluru
-  map = new Map(document.getElementById("map"), {
+  map = new Map(document.getElementById('map'), {
     zoom: 17,
-    center: positionMarker,
-    mapId: "smart-avenue",
+    center: positions.centeredOfMapPosition,
+    mapId: 'smart-avenue',
   });
 
-  // The marker, positioned at Uluru
   marker = new google.maps.Marker({
     map: map,
     position: positionMarker,
     icon: {
-      url: "src/images/icons/pin-icon.svg", // Path to your custom icon
-      scaledSize: new google.maps.Size(110, 110), // Adjust the size as needed
-      // anchor: new google.maps.Point(25, 25), // Optional anchor point
+      url: 'src/images/icons/pin-icon.svg',
+      scaledSize: new google.maps.Size(110, 110),
     },
   });
 
@@ -33,16 +50,14 @@ async function initMap() {
     constructor(position, content) {
       super();
       this.position = position;
-      content.classList.add("popup-bubble");
+      content.classList.add('location__map-popup-bubble');
 
-      // This zero-height div is positioned at the bottom of the bubble.
-      const bubbleAnchor = document.createElement("div");
+      const bubbleAnchor = document.createElement('div');
 
-      bubbleAnchor.classList.add("popup-bubble-anchor");
+      bubbleAnchor.classList.add('location__map-popup-bubble-anchor');
       bubbleAnchor.appendChild(content);
-      // This zero-height div is positioned at the bottom of the tip.
-      this.containerDiv = document.createElement("div");
-      this.containerDiv.classList.add("popup-container");
+      this.containerDiv = document.createElement('div');
+      this.containerDiv.classList.add('location__map-popup-container');
       this.containerDiv.appendChild(bubbleAnchor);
     }
 
@@ -60,15 +75,14 @@ async function initMap() {
       const divPosition = this.getProjection().fromLatLngToDivPixel(
         this.position
       );
-      // Hide the popup when it is far out of view.
       const display =
         Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000
-          ? "block"
-          : "none";
+          ? 'block'
+          : 'none';
 
-      if (display === "block") {
-        this.containerDiv.style.left = divPosition.x + "px";
-        this.containerDiv.style.top = divPosition.y + "px";
+      if (display === 'block') {
+        this.containerDiv.style.left = divPosition.x + 'px';
+        this.containerDiv.style.top = divPosition.y + 'px';
       }
 
       if (this.containerDiv.style.display !== display) {
@@ -78,10 +92,24 @@ async function initMap() {
   }
 
   popup = new Popup(
-    new google.maps.LatLng(50.37050643116534, 30.39561383862395),
-    document.getElementById("map-popup")
+    new google.maps.LatLng(positions.popupPosition),
+    document.getElementById('map-popup')
   );
   popup.setMap(map);
+}
+
+function getPositionBasedOnScreenWidth() {
+  if (window.innerWidth <= 666) {
+    return {
+      popupPosition: positionPopup.mobile,
+      centeredOfMapPosition: positionCenteredOfMap.mobile,
+    };
+  } else {
+    return {
+      popupPosition: positionPopup.desktop,
+      centeredOfMapPosition: positionCenteredOfMap.desktop,
+    };
+  }
 }
 
 $(document).ready(function () {

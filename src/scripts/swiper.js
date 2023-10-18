@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+'use strict';
 
 function addTextProgressBar(indexSlide) {
   const innerDiv = document.querySelector('#swiper-mobile-slide-progress .inner');

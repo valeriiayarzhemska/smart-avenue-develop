@@ -1,0 +1,79 @@
+@import '../utils/mixins';
+@import '../utils/vars';
+
+.planning {
+  position: relative;
+  margin-bottom: $margin-bottom-big;
+
+  @include onTablet {
+    margin-bottom: 7rem;
+  }
+
+  @include onPhone {
+    margin-bottom: 9.8rem;
+  }
+
+  &__titles {
+    @include flexColumn;
+    gap: $gap-small;
+    margin-bottom: $margin-bottom-tiny;
+  }
+
+  &__title > h2 {
+    line-height: $line-height-huge;
+
+    @include onPhone {
+      font-size: $font-size-huge;
+      line-height: $line-height-large;
+    }
+  }
+
+  &__subtitle > h5 {
+    line-height: $line-height-big;
+    color: $dark-gray-color;
+  }
+
+  &__filters-wrapper {
+    display: flex;
+    gap: $gap-big;
+  }
+
+  &__filter {
+    &-buttons-wrapper {
+      @include flexColumn;
+      gap: $gap-tiniest;
+    }
+
+    &-title > h6 {
+      line-height: $line-height-small;
+      color: $dark-gray-color;
+    }
+
+    &-buttons {
+      display: flex;
+    }
+
+    &-button {
+      padding: 1rem 1.5rem;
+      font-size: $font-size-small;
+      font-weight: 400;
+      line-height: $line-height-little;
+      color: $dark-gray-color;
+      border: 0.1rem solid $darker-white-color;
+      background-color: $white-color;
+      cursor: pointer;
+    }
+
+    &-button:hover {
+      background-color: $darker-white-color;
+    }
+
+    &-button--active,
+    &-button--active:hover {
+      outline: none;
+      color: $white-color;
+      background-color: $main-red-color;
+      border-color: $main-red-color;
+    }
+  }
+}

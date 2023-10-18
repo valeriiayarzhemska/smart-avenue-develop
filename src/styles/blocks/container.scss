@@ -1,14 +1,6 @@
-@import "../utils/mixins";
-@import "../utils/vars";
+@import '../utils/mixins';
+@import '../utils/vars';
 
 .container {
   overflow: hidden;
-
-  /* @include onTablet {
-    padding: 0 3rem;
-  }
-
-  @include onTablet {
-    padding: 0 2.5rem;
-  } */
 }

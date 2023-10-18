@@ -17,12 +17,12 @@
 
   &__link {
     @include inlineFlexJustifyAlignCenter;
-    gap: 1.5rem;
+    gap: $gap-little;
     padding: 1.8rem 2.2rem;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
+    font-size: $font-size-big;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: $line-height-tiny;
     color: $white-color;
   }
 
@@ -47,19 +47,19 @@
 
   &__link {
     @include inlineFlexJustifyAlignCenter;
-    gap: 1.2rem;
+    gap: $gap-tiny;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    font-size: $font-size-large;
     font-weight: 600;
-    line-height: 2.2rem;
+    line-height: $line-height-little;
     color: $main-red-color;
   }
 
   &__link--gray {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
+    font-size: $font-size-big;
     font-weight: 400;
-    line-height: 2.4rem;
+    line-height: $line-height-small;
     color: $gray-disabled-color;
   }
 

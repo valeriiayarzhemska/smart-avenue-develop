@@ -1,25 +1,9 @@
-@import "./vars";
+@import './vars';
 
-@mixin onPhone {
-  @media (max-width: 666px) {
-    @content;
-  }
-}
+// media queries
 
-@mixin onTabletDesign {
-  @media (max-width: 799px) {
-    @content;
-  }
-}
-
-@mixin onTablet {
-  @media (max-width: 1023px) {
-    @content;
-  }
-}
-
-@mixin onDesktopMini {
-  @media (max-width: 1365px) {
+@mixin onDesktopMiddle {
+  @media (max-width: 1679px) {
     @content;
   }
 }
@@ -30,17 +14,31 @@
   }
 }
 
-@mixin onDesktopMiddle {
-  @media (max-width: 1679px) {
+@mixin onDesktopMini {
+  @media (max-width: 1365px) {
     @content;
   }
 }
 
-/* @mixin onDesktopWide {
-  @media (max-width: 1680px) {
+@mixin onTablet {
+  @media (max-width: 1023px) {
     @content;
   }
-} */
+}
+
+@mixin onTabletDesign {
+  @media (max-width: 799px) {
+    @content;
+  }
+}
+
+@mixin onPhone {
+  @media (max-width: 666px) {
+    @content;
+  }
+}
+
+// flex
 
 @mixin flexColumn {
   display: flex;
@@ -115,4 +113,21 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+// width and height
+
+@mixin fullWidthHeight {
+  width: $full-width;
+  height: $full-height;
+}
+
+// width, height, object-fit, object-position for images
+
+@mixin fullImageContainer {
+  display: block;
+  width: $full-width;
+  height: $full-height;
+  object-fit: cover;
+  object-position: center;
 }
