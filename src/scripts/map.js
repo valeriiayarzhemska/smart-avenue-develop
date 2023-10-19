@@ -112,6 +112,6 @@ function getPositionBasedOnScreenWidth() {
   }
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
   initMap();
 });

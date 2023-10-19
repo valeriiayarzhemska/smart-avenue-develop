@@ -31,4 +31,14 @@
       padding: 0 2.5rem;
     }
   }
+
+  &__container--tablet-swiper {
+    @include onTablet {
+      padding: 0 0 0 3rem;
+    }
+
+    @include onPhone {
+      padding: 0 2.5rem;
+    }
+  }
 }

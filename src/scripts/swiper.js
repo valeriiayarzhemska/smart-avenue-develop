@@ -99,6 +99,32 @@ const advantagesSwiperMobile = new Swiper('.advantages__swiper-mobile', {
   },
 });
 
+const planningSwiper = new Swiper('.planning__swiper', {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  breakpoints: {
+    666: {
+      slidesPerView: 1.8,
+    },
+    800: {
+      slidesPerView: 2.75,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+
+  pagination: {
+    el: '.planning__swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.planning__swiper-button-next',
+    prevEl: '.planning__swiper-button-prev',
+  },
+});
+
 const newsSwiper = new Swiper('.news__swiper', {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -142,7 +168,7 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
   },
 });
 
-window.onload = function () {
+window.onload = function() {
   createProgressCircle('#swiper-slide-progress1');
   startAnimation(progressBarArray[0]);
 

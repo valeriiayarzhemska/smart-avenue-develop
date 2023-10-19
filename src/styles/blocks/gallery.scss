@@ -3,23 +3,23 @@
 
 .gallery {
   position: relative;
-  margin-bottom: $margin-bottom-huge;
+  margin-bottom: $margin-bottom-xll;
 
   @include onTablet {
-    margin-bottom: $margin-bottom-large;
+    margin-bottom: $margin-bottom-xl;
   }
 
   @include onPhone {
-    margin-bottom: $margin-bottom-big;
+    margin-bottom: $margin-bottom-l;
   }
 
   &__title > h2 {
-    margin-bottom: $margin-bottom-small;
-    line-height: $line-height-huge;
+    margin-bottom: $margin-bottom-m;
+    line-height: $line-height-xll;
 
     @include onPhone {
-      font-size: $font-size-huge;
-      line-height: $line-height-large;
+      font-size: $font-size-xll;
+      line-height: $line-height-xl;
     }
   }
 
@@ -57,9 +57,7 @@
     &-pagination {
       display: none;
       z-index: 2 !important;
-    }
 
-    &-pagination {
       @include onPhone {
         position: relative !important;
         display: block;

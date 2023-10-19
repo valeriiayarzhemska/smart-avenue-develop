@@ -96,6 +96,12 @@
   justify-content: flex-end;
 }
 
+@mixin flexJustifyEndAlignCenter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 @mixin flexColumnJustifyAlignBetween {
   display: flex;
   justify-content: space-between;

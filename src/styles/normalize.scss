@@ -1,8 +1,8 @@
-@import "./utils/mixins";
-@import "./utils/vars";
+@import './utils/mixins';
+@import './utils/vars';
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 10px;
   scroll-behavior: smooth;
 
@@ -23,7 +23,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
@@ -44,18 +44,18 @@ h4 {
 }
 
 h5 {
-  font-size: $font-size-large;
+  font-size: $font-size-xl;
   font-weight: 400;
 }
 
 h6 {
-  font-size: $font-size-big;
+  font-size: $font-size-l;
   font-weight: 400;
 }
 
 p {
-  font-family: "Roboto", sans-serif;
-  font-size: $font-size-large;
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size-xl;
   font-weight: 400;
   color: $dark-gray-color;
 }

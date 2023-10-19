@@ -17,12 +17,12 @@
 
   &__link {
     @include inlineFlexJustifyAlignCenter;
-    gap: $gap-little;
+    gap: $gap-s;
     padding: 1.8rem 2.2rem;
     font-family: 'Montserrat', sans-serif;
-    font-size: $font-size-big;
+    font-size: $font-size-l;
     font-weight: 700;
-    line-height: $line-height-tiny;
+    line-height: $line-height-xs;
     color: $white-color;
   }
 
@@ -47,19 +47,19 @@
 
   &__link {
     @include inlineFlexJustifyAlignCenter;
-    gap: $gap-tiny;
+    gap: $gap-xs;
     font-family: 'Montserrat', sans-serif;
-    font-size: $font-size-large;
+    font-size: $font-size-xl;
     font-weight: 600;
-    line-height: $line-height-little;
+    line-height: $line-height-s;
     color: $main-red-color;
   }
 
   &__link--gray {
     font-family: 'Roboto', sans-serif;
-    font-size: $font-size-big;
+    font-size: $font-size-l;
     font-weight: 400;
-    line-height: $line-height-small;
+    line-height: $line-height-m;
     color: $gray-disabled-color;
   }
 
@@ -67,4 +67,13 @@
     width: 2.4rem;
     height: 2.4rem;
   }
+}
+
+.button--full-width {
+  width: $full-width;
+  max-width: none;
+}
+
+.button:hover {
+  background-color: $hover-red-color;
 }

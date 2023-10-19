@@ -30,11 +30,11 @@
 
   &__list {
     @include flexJustifyAlignCenter;
-    gap: $gap-big;
+    gap: $gap-l;
   }
 
   &__link {
-    font-size: $font-size-big;
+    font-size: $font-size-l;
     color: $white-color;
     opacity: 0.8;
   }
@@ -49,8 +49,8 @@
 
   &__link--additional {
     display: inline-block;
-    margin-top: $margin-top-little;
-    font-size: $font-size-big;
+    margin-top: $margin-top-s;
+    font-size: $font-size-l;
   }
 
   &__item:not(:last-child) {
@@ -86,7 +86,7 @@
 
   &__item--additional {
     @include flexJustifyAlignEnd;
-    gap: $gap-small;
+    gap: $gap-m;
     color: $white-color;
   }
 
@@ -105,14 +105,14 @@
 
   &__item--subtitles {
     @include flexJustifyAlignCenter;
-    gap: $gap-tiniest;
+    gap: $gap-xss;
   }
 
   &__item--subtitle {
     display: block;
     color: $white-color;
     opacity: 0.8;
-    font-size: $font-size-tiny;
+    font-size: $font-size-xs;
   }
 
   &__item--scrolling {
@@ -198,7 +198,7 @@ a.nav__item--subtitle {
   &__list {
     @include flexColumnJustifyAlignCenter;
     flex-grow: 1;
-    gap: $gap-big;
+    gap: $gap-l;
   }
 
   &__link {
@@ -216,8 +216,8 @@ a.nav__item--subtitle {
 
   &__link--additional {
     display: block;
-    margin-top: $margin-top-little;
-    font-size: $font-size-small;
+    margin-top: $margin-top-s;
+    font-size: $font-size-m;
   }
 
   &__delimeter {
@@ -237,7 +237,7 @@ a.nav__item--subtitle {
   &__item--additional-info-language,
   &__item--additional-info-phone {
     @include flexAlignEnd;
-    gap: $gap-tiniest;
+    gap: $gap-xss;
   }
 
   &__item--additional-language {
@@ -250,13 +250,13 @@ a.nav__item--subtitle {
 
   &__item--subtitles {
     @include flexJustifyAlignCenter;
-    gap: $gap-tiniest;
+    gap: $gap-xss;
   }
 
   &__item--subtitle {
     display: block;
     opacity: 0.8;
-    font-size: $font-size-tiny;
+    font-size: $font-size-xs;
   }
 
   &__item--subtitle-language {
@@ -271,7 +271,7 @@ a.nav__item--subtitle {
 
   &__social {
     @include flexAlignCenter;
-    gap: $gap-small;
+    gap: $gap-m;
 
     &-icon-link {
       @include flexJustifyAlignCenter;

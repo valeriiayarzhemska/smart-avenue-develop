@@ -3,14 +3,14 @@
 
 .information {
   position: relative;
-  margin-bottom: $margin-bottom-huge;
+  margin-bottom: $margin-bottom-xll;
 
   @include onTablet {
-    margin-bottom: $margin-bottom-large;
+    margin-bottom: $margin-bottom-xl;
   }
 
   @include onPhone {
-    margin-bottom: $margin-bottom-big;
+    margin-bottom: $margin-bottom-l;
   }
 
   &__swiper {
@@ -47,16 +47,14 @@
 
     &-container {
       @include flexColumn;
-      gap: $gap-big;
+      gap: $gap-l;
       position: relative;
     }
 
     &-pagination {
       display: none;
       z-index: 2 !important;
-    }
-
-    &-pagination {
+  
       @include onTablet {
         display: block;
         bottom: 2rem !important;
@@ -77,8 +75,8 @@
 
     &-buttons-wrapper {
       position: absolute;
-      bottom: 50.2rem;
-      left: 65.3rem;
+      bottom: 50.3rem;
+      left: 65.2rem;
 
       @include onTablet {
         justify-content: flex-start;
@@ -90,7 +88,7 @@
       display: flex;
       top: initial;
       bottom: 10.155rem;
-      width: 16.4rem;
+      width: 16.3rem;
 
       @include onDesktopSmall {
         bottom: 9.8rem;
@@ -107,7 +105,7 @@
     &-button-next {
       width: 7.2rem !important;
       height: 7.4rem !important;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: $gray-button-color;
 
       @include onTablet {
         display: none !important;
@@ -180,18 +178,18 @@
 
       &-content {
         @include flexColumnAlignStart;
-        gap: $gap-large;
+        gap: $gap-xl;
 
         @include onTablet {
           justify-content: flex-end;
-          gap: $gap-huge;
+          gap: $gap-xll;
           width: $full-width;
         }
       }
 
       &-info {
         @include flexColumn;
-        gap: $gap-big;
+        gap: $gap-l;
         max-width: 52.6rem;
 
         @include onTablet {
@@ -200,7 +198,7 @@
       }
 
       &-title > h2 {
-        line-height: $line-height-huge;
+        line-height: $line-height-xll;
 
         @include onTablet {
           color: $white-color;
@@ -213,7 +211,7 @@
       }
 
       &-description > p {
-        line-height: $line-height-big;
+        line-height: $line-height-l;
 
         @include onTablet {
           color: $white-color;

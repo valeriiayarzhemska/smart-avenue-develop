@@ -60,22 +60,22 @@
 
     @include onTablet {
       flex-direction: column;
-      margin-bottom: $margin-bottom-little;
+      margin-bottom: $margin-bottom-s;
     }
 
     @include onPhone {
       flex-direction: column;
-      gap: $gap-big;
+      gap: $gap-l;
     }
 
     &-blocks {
       display: flex;
       flex: 1;
-      gap: $gap-tiny;
+      gap: $gap-xs;
 
       @include onPhone {
         flex-direction: column;
-        gap: $gap-big;
+        gap: $gap-l;
       }
     }
 
@@ -88,37 +88,37 @@
     @include flexColumn;
 
     &-title > h5 {
-      margin-bottom: $margin-bottom-tiny;
+      margin-bottom: $margin-bottom-xs;
     }
 
     &-subtitle > h6 {
       margin-bottom: 1.4rem;
-      font-size: $font-size-small;
+      font-size: $font-size-m;
       font-weight: 700;
-      line-height: $line-height-tiny;
+      line-height: $line-height-xs;
       color: $white-color;
       opacity: 0.8;
     }
   }
 
   &__list--nav {
-    gap: $gap-tiny;
+    gap: $gap-xs;
   }
 
   &__list--news {
-    gap: $gap-little;
+    gap: $gap-s;
   }
 
   &__list--contacts {
     margin-bottom: 1rem;
-    gap: $gap-tiniest;
+    gap: $gap-xss;
   }
 
   &__title > h5,
   &__list-title > h5 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    line-height: $line-height-little;
+    line-height: $line-height-s;
     color: $white-color;
     opacity: 0.8;
   }
@@ -128,9 +128,9 @@
   &__link--contacts > p,
   &__info-description > p {
     font-family: 'Roboto', sans-serif;
-    font-size: $font-size-small;
+    font-size: $font-size-m;
     font-weight: 400;
-    line-height: $line-height-little;
+    line-height: $line-height-s;
     color: $white-color;
     opacity: 0.4;
   }
@@ -155,7 +155,7 @@
 
   &__item--contacts-info {
     @include flexAlignCenter;
-    gap: $gap-tiniest;
+    gap: $gap-xss;
   }
 
   &__link > span {
@@ -165,7 +165,7 @@
 
   &__info-description {
     @include flexColumn;
-    gap: $gap-little;
+    gap: $gap-s;
 
     @include onTablet {
       max-width: 23rem;
@@ -179,7 +179,7 @@
   &__social {
     &-links {
       @include flexAlignCenter;
-      gap: $gap-little;
+      gap: $gap-s;
     }
 
     &-icon-link {
@@ -194,7 +194,7 @@
   }
 
   &__rights > h6 {
-    font-size: $font-size-tiny;
+    font-size: $font-size-xs;
     line-height: 1.9rem;
     text-align: center;
     color: rgba(255, 255, 255, 0.5);

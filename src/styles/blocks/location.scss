@@ -26,12 +26,12 @@
     }
 
     &-title > h2 {
-      margin-bottom: $margin-bottom-tiny;
-      line-height: $line-height-huge;
+      margin-bottom: $margin-bottom-xs;
+      line-height: $line-height-xll;
     }
 
     &-label {
-      font-size: $font-size-little;
+      font-size: $font-size-s;
       font-weight: 400;
       line-height: 1.9rem;
       color: $gray-disabled-color;
@@ -39,7 +39,7 @@
 
     &-inputs-container {
       @include flexColumn;
-      gap: $gap-small;
+      gap: $gap-m;
       margin-bottom: 2.5rem;
     }
 
@@ -64,9 +64,9 @@
     &-input-container > textarea,
     &-phone-placeholder > span {
       font-family: 'Roboto', sans-serif;
-      font-size: $font-size-big;
+      font-size: $font-size-l;
       font-weight: 400;
-      line-height: $line-height-small;
+      line-height: $line-height-m;
       color: $dark-gray-color;
     }
 
@@ -82,9 +82,9 @@
 
     &-input-container > span.error {
       font-family: 'Roboto', sans-serif;
-      font-size: $font-size-tiny;
+      font-size: $font-size-xs;
       font-weight: 400;
-      line-height: $line-height-tiny;
+      line-height: $line-height-xs;
       color: $yellow-color;
     }
 
@@ -116,13 +116,13 @@
 
     &-sumbit-container {
       display: flex;
-      gap: $gap-little;
+      gap: $gap-s;
     }
 
     &-sumbit-container > span {
-      font-size: $font-size-little;
+      font-size: $font-size-s;
       font-weight: 400;
-      line-height: $line-height-little;
+      line-height: $line-height-s;
       color: $gray-agreement-color;
     }
 
@@ -131,9 +131,9 @@
       padding: 1.8rem 2.2rem;
       height: 5.6rem;
       font-family: 'Montserrat', sans-serif;
-      font-size: $font-size-big;
+      font-size: $font-size-l;
       font-weight: 800;
-      line-height: $line-height-tiny;
+      line-height: $line-height-xs;
       color: $white-color;
       border: none;
     }
@@ -180,7 +180,7 @@
       }
 
       &-title > h3 {
-        line-height: $line-height-big;
+        line-height: $line-height-l;
         color: $black-color;
 
         @include onPhone {
@@ -189,18 +189,18 @@
       }
 
       &-text {
-        margin-bottom: $margin-bottom-little;
+        margin-bottom: $margin-bottom-s;
 
         @include onTabletDesign {
-          margin-bottom: $margin-bottom-tiny;
+          margin-bottom: $margin-bottom-xs;
         }
       }
 
       &-text > p {
-        line-height: $line-height-big;
+        line-height: $line-height-l;
 
         @include onPhone {
-          font-size: $font-size-little;
+          font-size: $font-size-s;
         }
       }
 
@@ -208,7 +208,7 @@
         @include onPhone {
           padding: 1rem 1.5rem;
           height: auto;
-          font-size: $font-size-little;
+          font-size: $font-size-s;
         }
       }
     }
@@ -224,12 +224,12 @@
 
       &-list {
         @include flexColumn;
-        gap: $gap-tiniest;
+        gap: $gap-xss;
       }
 
       &-item {
         @include flexAlignCenter;
-        gap: $gap-tiniest;
+        gap: $gap-xss;
       }
 
       &-item--location {
@@ -238,17 +238,17 @@
 
       &-title > h5 {
         margin-bottom: 1.8rem;
-        font-size: $font-size-big;
+        font-size: $font-size-l;
         font-weight: 800;
-        line-height: $line-height-little;
+        line-height: $line-height-s;
         color: $black-color;
       }
 
       &-link > a,
       &-link > p {
-        font-size: $font-size-big;
+        font-size: $font-size-l;
         font-weight: 400;
-        line-height: $line-height-little;
+        line-height: $line-height-s;
         color: $dark-gray-color;
       }
 

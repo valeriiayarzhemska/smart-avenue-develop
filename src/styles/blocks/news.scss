@@ -3,23 +3,23 @@
 
 .news {
   position: relative;
-  margin-bottom: $margin-bottom-large;
+  margin-bottom: $margin-bottom-xl;
 
   @include onTablet {
-    margin-bottom: $margin-bottom-big;
+    margin-bottom: $margin-bottom-l;
   }
 
   &__header {
     @include flexColumnJustifyAlignBetween;
-    margin-bottom: $margin-bottom-small;
+    margin-bottom: $margin-bottom-m;
   }
 
   &__title > h2 {
-    line-height: $line-height-huge;
+    line-height: $line-height-xll;
 
     @include onPhone {
-      font-size: $font-size-huge;
-      line-height: $line-height-large;
+      font-size: $font-size-xll;
+      line-height: $line-height-xl;
     }
   }
 
@@ -28,7 +28,7 @@
       &-image-container {
         position: relative;
         display: flex;
-        margin-bottom: $margin-bottom-little;
+        margin-bottom: $margin-bottom-s;
         height: 31rem;
         width: $full-width;
         top: 0;
@@ -70,13 +70,13 @@
 
       &-subtitle > h6 {
         margin-bottom: 0.8rem;
-        line-height: $line-height-small;
+        line-height: $line-height-m;
         color: $gray-disabled-color;
       }
 
       &-title-link > h4 {
-        margin-bottom: $margin-bottom-tiny;
-        line-height: $line-height-big;
+        margin-bottom: $margin-bottom-xs;
+        line-height: $line-height-l;
         transition: color 0.3s ease;
       }
 
@@ -88,7 +88,7 @@
         margin-bottom: 2.5rem;
         font-size: 1.5rem;
         font-weight: 400;
-        line-height: $line-height-big;
+        line-height: $line-height-l;
         color: $dark-gray-color;
       }
     }

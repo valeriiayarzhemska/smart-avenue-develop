@@ -43,7 +43,7 @@
 
     &-container {
       @include flexColumn;
-      gap: $gap-big;
+      gap: $gap-l;
       position: relative;
     }
 
@@ -196,18 +196,18 @@
 
       &-content {
         @include flexColumnAlignStart;
-        gap: $gap-large;
+        gap: $gap-xl;
 
         @include onTablet {
           justify-content: flex-end;
-          gap: $gap-huge;
+          gap: $gap-xll;
           width: $full-width;
         }
       }
 
       &-info {
         @include flexColumn;
-        gap: $gap-big;
+        gap: $gap-l;
         max-width: 40rem;
 
         @include onTablet {
@@ -225,7 +225,7 @@
       }
 
       &-description > p {
-        line-height: $line-height-big;
+        line-height: $line-height-l;
 
         @include onTablet {
           color: $white-color;
@@ -258,17 +258,17 @@
     &-slide {
       &-content {
         @include flexColumnAlignStart;
-        gap: $gap-large;
+        gap: $gap-xl;
       }
 
       &-info {
         @include flexColumnAlignStart;
-        gap: $gap-big;
+        gap: $gap-l;
       }
 
       &-title > h2 {
-        font-size: $font-size-huge;
-        line-height: $line-height-large;
+        font-size: $font-size-xll;
+        line-height: $line-height-xl;
       }
     }
   }
