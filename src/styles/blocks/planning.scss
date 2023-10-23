@@ -84,7 +84,7 @@
     &-pagination {
       display: none;
       z-index: 2 !important;
-  
+
       @include onTablet {
         display: block;
         bottom: 2.5rem !important;
@@ -170,7 +170,7 @@
       }
 
       &-image-container > img {
-        @include fullImageContainer;
+        @include fullImageContainerContain;
       }
 
       &-title {
@@ -202,7 +202,7 @@
           width: 1.8rem;
           height: 1.8rem;
         }
-  
+
         &-icon-container > img {
           @include fullWidthHeight;
         }

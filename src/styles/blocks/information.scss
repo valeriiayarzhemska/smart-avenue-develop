@@ -38,7 +38,7 @@
     }
 
     &-image {
-      @include fullImageContainer;
+      @include fullImageContainerCover;
 
       @include onTablet {
         object-position: bottom;
@@ -54,7 +54,7 @@
     &-pagination {
       display: none;
       z-index: 2 !important;
-  
+
       @include onTablet {
         display: block;
         bottom: 2rem !important;

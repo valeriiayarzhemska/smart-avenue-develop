@@ -38,7 +38,7 @@
     }
 
     &-image {
-      @include fullImageContainer;
+      @include fullImageContainerCover;
     }
 
     &-container {

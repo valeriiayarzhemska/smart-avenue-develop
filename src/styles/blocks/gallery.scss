@@ -47,7 +47,7 @@
     }
 
     &-image {
-      @include fullImageContainer;
+      @include fullImageContainerCover;
 
       @include onTablet {
         object-position: bottom;

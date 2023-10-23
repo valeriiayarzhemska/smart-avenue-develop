@@ -168,7 +168,7 @@ const gallerySwiper = new Swiper('.gallery__swiper', {
   },
 });
 
-window.onload = function() {
+$(document).ready(function () {
   createProgressCircle('#swiper-slide-progress1');
   startAnimation(progressBarArray[0]);
 
@@ -178,4 +178,4 @@ window.onload = function() {
 
   createProgressCircle('#swiper-mobile-slide-progress', progressBarType.mobile);
   startAnimation(progressBarMobile);
-};
+});

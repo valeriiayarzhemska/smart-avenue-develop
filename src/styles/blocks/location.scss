@@ -167,7 +167,7 @@
       }
 
       &-image > img {
-        @include fullImageContainer;
+        @include fullImageContainerCover;
       }
 
       &-info {

@@ -130,10 +130,18 @@
 
 // width, height, object-fit, object-position for images
 
-@mixin fullImageContainer {
+@mixin fullImageContainerCover {
   display: block;
   width: $full-width;
   height: $full-height;
   object-fit: cover;
+  object-position: center;
+}
+
+@mixin fullImageContainerContain {
+  display: block;
+  width: $full-width;
+  height: $full-height;
+  object-fit: contain;
   object-position: center;
 }
