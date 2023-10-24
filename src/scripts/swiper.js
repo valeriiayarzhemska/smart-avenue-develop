@@ -99,29 +99,21 @@ const advantagesSwiperMobile = new Swiper('.advantages__swiper-mobile', {
   },
 });
 
-const planningSwiper = new Swiper('.planning__swiper', {
-  slidesPerView: 1,
-  spaceBetween: 40,
-  breakpoints: {
-    666: {
-      slidesPerView: 1.8,
-    },
-    800: {
-      slidesPerView: 2.75,
-    },
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 30,
-    },
-  },
+// planningSwiper is in apartments-list.js
+
+const planningPopupSwiper = new Swiper('.planning__popup-swiper', {
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 20,
 
   pagination: {
-    el: '.planning__swiper-pagination',
+    el: '.planning__popup-swiper-pagination',
   },
 
   navigation: {
-    nextEl: '.planning__swiper-button-next',
-    prevEl: '.planning__swiper-button-prev',
+    nextEl: '.planning__popup-swiper-button-next',
+    prevEl: '.planning__popup-swiper-button-prev',
   },
 });
 

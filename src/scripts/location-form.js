@@ -16,7 +16,7 @@ const errorText = {
 };
 
 $(document).ready(function() {
-   function disableScroll() {
+  function disableScroll() {
     $('body').css({ 'overflow-y': 'hidden' });
   }
 
@@ -106,10 +106,8 @@ $(document).ready(function() {
       },
 
       submitHandler: function(form) {
-        // Show the popup
-        //$('#popup').show();
         event.preventDefault();
-        $('.location__form-popup').trigger('click'); // Prevent the form from being submitted
+        $('.location__form-popup').trigger('click');
       },
     });
 });
