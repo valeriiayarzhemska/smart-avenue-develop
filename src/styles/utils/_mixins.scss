@@ -145,3 +145,34 @@
   object-fit: contain;
   object-position: center;
 }
+
+// swiper buttons
+
+@mixin paginationPhoneTablet {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: $light-gray-color;
+}
+
+@mixin buttonDesktop {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+@mixin buttonsDesktop {
+  width: 7.2rem !important;
+  height: 7.4rem !important;
+  background-color: $gray-button-color;
+}
+
+@mixin buttonsDesktopTransparent {
+  width: 7.2rem !important;
+  height: 7.4rem !important;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@mixin buttonsDesktopWrapper {
+  position: absolute;
+  display: flex;
+  top: initial;
+}

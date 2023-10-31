@@ -67,9 +67,7 @@
 
     &-pagination > .swiper-pagination-bullet {
       @include onPhone {
-        width: 0.8rem;
-        height: 0.8rem;
-        background-color: $light-gray-color;
+        @include paginationPhoneTablet;
       }
     }
 
@@ -96,9 +94,7 @@
     }
 
     &-buttons {
-      position: absolute;
-      display: flex;
-      top: initial;
+      @include buttonsDesktopWrapper;
       bottom: 10.155rem;
       width: 16.4rem;
 
@@ -115,9 +111,7 @@
 
     &-button-prev,
     &-button-next {
-      width: 7.2rem !important;
-      height: 7.4rem !important;
-      background-color: rgba(0, 0, 0, 0.4);
+      @include buttonsDesktopTransparent;
 
       @include onTablet {
         display: none !important;
@@ -131,12 +125,11 @@
 
     &-button-prev > img,
     &-button-next > img {
-      width: 3.2rem;
-      height: 3.2rem;
+      @include buttonDesktop;
     }
 
     &-button-next > img {
-      transform: rotate(180deg);
+      transform: $transform-rotate-half;
     }
 
     &-slide {

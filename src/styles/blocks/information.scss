@@ -84,9 +84,7 @@
     }
 
     &-buttons {
-      position: absolute;
-      display: flex;
-      top: initial;
+      @include buttonsDesktopWrapper;
       bottom: 10.155rem;
       width: 16.3rem;
 
@@ -103,9 +101,7 @@
 
     &-button-prev,
     &-button-next {
-      width: 7.2rem !important;
-      height: 7.4rem !important;
-      background-color: $gray-button-color;
+      @include buttonsDesktop;
 
       @include onTablet {
         display: none !important;
@@ -119,12 +115,11 @@
 
     &-button-prev > img,
     &-button-next > img {
-      width: 3.2rem;
-      height: 3.2rem;
+      @include buttonDesktop;
     }
 
     &-button-next > img {
-      transform: rotate(180deg);
+      transform: $transform-rotate-half;
     }
 
     &-slide {

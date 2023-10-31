@@ -1,5 +1,12 @@
 'use strict';
 
+function countSlides(slideIndex, totalSlides) {
+  const counterElement = document.querySelector('.planning__popup-slides-counter span');
+  if (counterElement) {
+    counterElement.textContent = `Зображення ${slideIndex} / ${totalSlides}`;
+  }
+}
+
 const planningSwiperSettings = {
   slidesPerView: 1,
   spaceBetween: 40,
@@ -26,6 +33,28 @@ const planningSwiperSettings = {
   },
 };
 let planningSwiper = new Swiper('.planning__swiper', planningSwiperSettings);
+
+const planningPopupSwiper = new Swiper('.planning__popup-swiper', {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  on: {
+    slideChange: function () {
+      const totalSlides = this.slides.length;
+      const slideIndex = this.realIndex + 1;
+      countSlides(slideIndex, totalSlides);
+    },
+  },
+
+  pagination: {
+    el: '.planning__popup-swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.planning__popup-swiper-button-next',
+    prevEl: '.planning__popup-swiper-button-prev',
+  },
+});
 
 const apartments = {
   number: [1, 2, 3, 4, 5],
@@ -260,7 +289,7 @@ $(document).ready(function () {
     $('body').css({ 'overflow-y': 'hidden' });
   }
 
-  $('.planning__popup-button').click(function (event) {
+  $('.planning__popup-cancel-button').click(function (event) {
     event.preventDefault();
     $.fancybox.close();
   });
