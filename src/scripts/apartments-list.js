@@ -134,21 +134,22 @@ function addApartmentsList(apartments) {
 
   if (apartments.length > 0) {
     apartments.forEach((apartment) => {
-      const slide = $("<div class='swiper-slide planning__swiper-slide'>")
-        .append(
-          $("<div class='planning__swiper-slide-image-container'>").append(
-            $("<img src='" + apartment.image + "' alt='building'>")
-          )
-        )
-        .append(
-          $("<div class='planning__swiper-slide-title'>").append(
-            $('<h4>').text(apartment.number + 'C' + apartment.square + 'K')
-          )
-        );
+      const slide = $(`
+        <div class='swiper-slide planning__swiper-slide'>
+          <div class='planning__swiper-slide-image-container'>
+            <img src='${apartment.image}' alt='building'>
+          </div>
+          <div class='planning__swiper-slide-title'>
+            <h4>${apartment.number}C${apartment.square}K</h4>
+          </div>
+      `);
 
-      const listContainer = $(
-        "<div class='planning__swiper-slide-list-container'>"
-      ).append($("<ul class='planning__swiper-slide-list'>"));
+      const listContainer = $(`
+        <div class='planning__swiper-slide-list-container'>
+          <ul class='planning__swiper-slide-list'>
+          </ul>
+        </div>
+      `);
 
       const items = [
         {
@@ -163,7 +164,7 @@ function addApartmentsList(apartments) {
           iconSrc: 'src/images/icons/square-icon.svg',
           iconAlt: 'building',
           title: 'Заг. площа',
-          description: apartment.square + ' м.кв',
+          description: `${apartment.square} м.кв`,
         },
         {
           type: 'link',
@@ -177,93 +178,55 @@ function addApartmentsList(apartments) {
       items.forEach((item) => {
         const isLink = item.type === 'link';
 
-        listContainer.find('.planning__swiper-slide-list').append(
-          $("<li class='planning__swiper-slide-item'>")
-            .append(
-              $(
-                "<div class='planning__swiper-slide-item-title-container'>"
-              ).append(
-                $(
-                  "<div class='planning__swiper-slide-item-icon-container'>"
-                ).append(
-                  $(
-                    "<img src='" +
-                      item.iconSrc +
-                      "' alt='" +
-                      item.iconAlt +
-                      "'>"
-                  )
-                ),
-                $("<div class='planning__swiper-slide-item-title'>").append(
-                  $('<span>').text(item.title)
-                )
-              )
-            )
-            .append(
-              isLink
-                ? $("<div class='planning__swiper-slide-item-description'>").append(
-                    $("<a href='#' class='planning__swiper-slide-item-description-link'>").text(item.description)
-                  )
-                : $("<div class='planning__swiper-slide-item-description'>").append(
-                    $('<span>').text(item.description)
-                  )
-            )
-        );
+        listContainer.find('.planning__swiper-slide-list').append($(`
+          <li class='planning__swiper-slide-item'>
+            <div class='planning__swiper-slide-item-title-container'>
+              <div class='planning__swiper-slide-item-icon-container'>
+                <img src='${item.iconSrc}' alt='${item.iconAlt}'>
+              </div>
+              <div class='planning__swiper-slide-item-title'>
+                <span>${item.title}</span>
+              </div>
+            </div>
+            <div class='planning__swiper-slide-item-description'>
+              ${isLink ? `<a href='#' class='planning__swiper-slide-item-description-link'>${item.description}</a>` : `<span>${item.description}</span>`}
+            </div>
+          </li>
+        `));
       });
 
       slide.append(listContainer);
 
-      slide
-        .append(
-          $("<div class='planning__swiper-slide-item-price-container'>").append(
-            $(
-              "<span class='planning__swiper-slide-item-price-description'>"
-            ).text('Від'),
-            $("<span class='planning__swiper-slide-item-price-number'>").text(
-              `${apartment.price
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, '.')}`
-            ),
-            $("<span class='planning__swiper-slide-item-price-currency'>").text(
-              'грн'
-            )
-          )
-        )
-        .append(
-          $("<div class='planning__swiper-slide-buttons-container'>").append(
-            $(
-              "<div class='planning__swiper-slide-button button button--full-width'>"
-            ).append(
-              $("<a href='#location-screen' class='button__link'>").append(
-                'Замовити дзвінок',
-                $(
-                  "<img src='src/images/icons/phone-white-icon.svg' alt='phone ring'>"
-                )
-              )
-            ),
-            $(
-              "<div class='planning__swiper-slide-button button-transparent button--full-width'>"
-            ).append(
-              $(
-                "<a href='src/files/presentation.pdf' download='presentation' class='button-transparent__link button-transparent__link--gray'>"
-              ).append(
-                'Завантажити в PDF',
-                $(
-                  "<img src='src/images/icons/download-gray-icon.svg' alt='right arrow'>"
-                )
-              )
-            )
-          )
-        );
+      slide.append($(`
+        <div class='planning__swiper-slide-item-price-container'>
+          <span class='planning__swiper-slide-item-price-description'>Від</span>
+          <span class='planning__swiper-slide-item-price-number'>${apartment.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}</span>
+          <span class='planning__swiper-slide-item-price-currency'>грн</span>
+        </div>
+        <div class='planning__swiper-slide-buttons-container'>
+          <div class='planning__swiper-slide-button button button--full-width'>
+            <a href='#location-screen' class='button__link'>Замовити дзвінок
+              <img src='src/images/icons/phone-white-icon.svg' alt='phone ring'>
+            </a>
+          </div>
+          <div class='planning__swiper-slide-button button-transparent button--full-width'>
+            <a href='src/files/presentation.pdf' download='presentation' class='button-transparent__link button-transparent__link--gray'>Завантажити в PDF
+              <img src='src/images/icons/download-gray-icon.svg' alt='right arrow'>
+            </a>
+          </div>
+        </div>
+      `));
 
       $swiperWrapper.append(slide);
     });
   } else {
-    const slide = $("<div class='planning__swiper-slide-empty'>").append(
-      $("<div class='planning__swiper-slide-empty-title'>").append(
-        $('<h4>').text('На разі, таких квартир немає')
-      )
-    );
+    const slide = $(`
+      <div class='planning__swiper-slide-empty'>
+        <div class='planning__swiper-slide-empty-title'>
+          <h4>Наразі, таких квартир немає</h4>
+        </div>
+      </div>
+    `);
 
     $swiperWrapper.append(slide);
   }
