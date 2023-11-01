@@ -189,7 +189,7 @@
     }
 
     &-icon-link > img {
-      @include fullWidthHeight;
+      @include fullImageContainerContain;
     }
   }
 
