@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "format": "prettier --check ./src",
+    "start": "gulp",
     "build": "gulp build",
-    "start": "gulp"
+    "deploy": "gulp build && gulp deploy"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +27,7 @@
     "gulp-cssnano": "^2.1.3",
     "gulp-gh-pages": "^0.5.4",
     "gulp-imagemin": "^8.0.0",
+    "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "prettier": "^3.0.0",

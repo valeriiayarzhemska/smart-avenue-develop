@@ -1,6 +1,6 @@
 import gulp from 'gulp';
-import deploy from 'gulp-gh-pages';
-import server from 'browser-sync';
+import ghPages from 'gulp-gh-pages';
+import browserSync from 'browser-sync';
 
 import cssnano from 'gulp-cssnano';
 import dartSass from 'sass';
@@ -11,18 +11,20 @@ import imagemin from 'gulp-imagemin';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import babel from 'gulp-babel';
+import replace from 'gulp-replace';
 import { deleteAsync } from 'del';
 
 const sass = gulpSass(dartSass);
+const server = browserSync.create();
 
 const paths = {
   styles: {
     src: 'src/styles/**/*.scss',
-    dest: 'dist/css/',
+    dest: 'dist/src/styles/',
   },
   scripts: {
     src: 'src/scripts/*.js',
-    dest: 'dist/js/',
+    dest: 'dist/src/scripts/',
   },
   html: {
     src: '*.html',
@@ -44,7 +46,7 @@ gulp.task('clean', async function () {
   return deletedPaths;
 });
 
-gulp.task('styles', function () {
+const gulpStyles = gulp.task('styles', function () {
   return gulp
     .src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
@@ -54,7 +56,7 @@ gulp.task('styles', function () {
     .pipe(gulp.dest(paths.styles.dest));
 });
 
-gulp.task('scripts', function () {
+const gulpScripts = gulp.task('scripts', function () {
   return gulp
     .src(paths.scripts.src, {
       sourcemaps: true,
@@ -65,8 +67,16 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest(paths.scripts.dest));
 });
 
+gulp.task('html', function () {
+  return gulp
+    .src(['./index.html'])
+    .pipe(replace('dist/src/styles', 'src/styles'))
+    .pipe(replace('dist/src/scripts', 'src/scripts'))
+    .pipe(gulp.dest(paths.html.dest));
+});
+
 gulp.task('serve', function () {
-  server.create().init({
+  server.init({
     server: '.',
     notify: false,
     open: true,
@@ -74,12 +84,9 @@ gulp.task('serve', function () {
     ui: false,
   });
 
-  gulp.watch(paths.styles.src, gulp.series('styles'));
-  gulp.watch(paths.scripts.src, gulp.series('scripts'));
-});
-
-gulp.task('html', function () {
-  return gulp.src(paths.html.src).pipe(gulp.dest(paths.html.dest));
+  gulp.watch(paths.styles.src, gulp.series('styles')).on('change', server.reload);
+  gulp.watch(paths.scripts.src, gulp.series('scripts')).on('change', server.reload);
+  gulp.watch(paths.html.src, gulp.series('html')).on('change', server.reload);
 });
 
 gulp.task('images', function () {
@@ -104,7 +111,7 @@ export const build = gulp.task(
 );
 
 gulp.task('deploy', function () {
-  return gulp.src('dist/**/*').pipe(deploy());
+  return gulp.src('./dist/**/*').pipe(ghPages());
 });
 
 export default build;

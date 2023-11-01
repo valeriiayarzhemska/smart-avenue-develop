@@ -1,6 +1,18 @@
 # Smart Avenue Repository
 
-### [DEMO LINK]()
+### [DEMO LINK](https://valeriiayarzhemska.github.io/smart-avenue-develop/)
+
+## Technologies Used
+
+The project uses the following technologies:
+
+- HTML: Used for the structure and content of the landing page.
+- CSS & Sass: Utilized for styling and maintaining CSS code using the Sass preprocessor.
+- JavaScript: Used for interactivity and handling user events.
+- jQuery: Employed for form validation to ensure correct email input from users.
+- Fancybox: Utilized for displaying and handling pop-up windows.
+- Swiper: Used to create all sliders.
+- Gulp: Used as a build system to automate tasks like Sass compilation and JavaScript minification.
 
 ## Installation
 
@@ -8,7 +20,7 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository to your local machine using Git:
 
-git clone https://github.com/your-username/kiwi-box-landing.git
+git clone https://github.com/your-username/smart-avenue-develop.git
 
 
 2. Navigate to the project directory:
@@ -21,11 +33,11 @@ cd smart-avenue-develop
 npm install
 
 
-4. Change the directory for main .css and .js files in index.html to make the project build and work for development:
+4. Start a development process:
 
-css/main.min.css --> dist/css/main.min.css
-js/main.min.js --> dist/js/main.min.js
+npm start
 
-5. Build the project using Gulp:
+5. Build and deploy the project:
 
-gulp
+npm run build
+npm run deploy
