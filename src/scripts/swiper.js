@@ -1,5 +1,3 @@
-'use strict';
-
 function addTextProgressBar(indexSlide) {
   const innerDiv = document.querySelector('#swiper-mobile-slide-progress .inner');
   innerDiv.innerText = `${indexSlide}/4`;

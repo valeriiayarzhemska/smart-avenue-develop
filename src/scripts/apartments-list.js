@@ -104,7 +104,6 @@ function filterApartmentsList(apartments) {
     return false;
   });
 
-  console.log(filteredApartmentsList);
   addApartmentsList(filteredApartmentsList);
 }
 
@@ -252,6 +251,10 @@ $(document).ready(function () {
     $('body').css({ 'overflow-y': 'hidden' });
   }
 
+  function enableScroll() {
+    $('body').css({ 'overflow-y': 'auto' });
+  }
+
   $('.planning__popup-cancel-button').click(function (event) {
     event.preventDefault();
     $.fancybox.close();
@@ -266,6 +269,7 @@ $(document).ready(function () {
     openEffect: 'none',
     closeEffect: 'none',
     beforeShow: disableScroll,
+    afterClose: enableScroll,
     smallBtn: false,
     toolbar: false,
     scrolling: 'hidden',
@@ -276,7 +280,7 @@ $(document).ready(function () {
     },
   });
 
-  $('.planning__swiper-slide-item-description-link').on('click', function () {
+  $('.planning__swiper-slide-item-description-link').on('click', function (event) {
     event.preventDefault();
     $('.planning__popup').trigger('click');
   });

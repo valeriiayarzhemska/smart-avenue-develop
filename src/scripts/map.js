@@ -1,5 +1,3 @@
-'use strict';
-
 const positionMarker = { lat: 50.37050643116534, lng: 30.39561383862395 };
 const positionPopup = { 
   desktop: {

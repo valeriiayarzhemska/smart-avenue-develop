@@ -1,8 +1,7 @@
-'use strict';
-
 const errorText = {
   name: {
     required: 'Вкажіть своє імʼя, будь ласка',
+    chars: 'Імʼя може містити лише літери',
     minlength: 'Імʼя повинно бути не коротшим, ніж 2 символи',
     maxlength: 'Імʼя не повинно бути довшим, ніж 30 символів',
   },
@@ -11,20 +10,20 @@ const errorText = {
     length: 'Вкажіть коректний номер телефону, будь ласка',
   },
   message: {
-    maxlength: 'Повідомлення не повинно бути довшим, ніж 150 символів',
+    maxlength: 'Повідомлення повинно бути до 150 символів',
   },
 };
 
-$(document).ready(function() {
-  function disableScroll() {
-    $('body').css({ 'overflow-y': 'hidden' });
-  }
+function disableScroll() {
+  $('body').css({ 'overflow-y': 'hidden' });
+}
 
-  function clearForm() {
-    $('.location__form')[0].reset();
-    $('body').css({ 'overflow-y': 'visible' });
-  }
+function clearForm() {
+  $('.location__form')[0].reset();
+  $('body').css({ 'overflow-y': 'visible' });
+}
 
+$(document).ready(function () {
   $('.location__form-popup-button').click(function (event) {
     event.preventDefault();
     $.fancybox.close();
@@ -52,17 +51,22 @@ $(document).ready(function() {
 
   $('#phone').mask('(00) 00 00 000');
 
+  $.validator.addMethod('alphabetic', function (value, element) {
+    return this.optional(element) || /^[a-zA-Zа-яА-Я\s]+$/.test(value);
+  }, errorText.name.chars);
+
   $('#form')
-    .submit(function(e) {
+    .submit(function (e) {
       e.preventDefault();
     })
     .validate({
-      errorElement: "span",
+      errorElement: 'span',
       rules: {
         name: {
           required: true,
           minlength: 2,
           maxlength: 30,
+          alphabetic: true,
         },
         phone: {
           required: true,
@@ -89,7 +93,7 @@ $(document).ready(function() {
         },
       },
 
-      highlight: function(element) {
+      highlight: function (element) {
         $(element)
           .closest('.location__form-input-label-container')
           .find('.location__form-input-error')
@@ -97,7 +101,7 @@ $(document).ready(function() {
           .addClass('location__form-has-success');
       },
 
-      unhighlight: function(element) {
+      unhighlight: function (element) {
         $(element)
           .closest('.location__form-input-label-container')
           .find('.location__form-input-error')
@@ -105,7 +109,7 @@ $(document).ready(function() {
           .addClass('location__form-has-error');
       },
 
-      submitHandler: function(form) {
+      submitHandler: function () {
         event.preventDefault();
         $('.location__form-popup').trigger('click');
       },

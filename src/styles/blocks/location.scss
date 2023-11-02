@@ -81,6 +81,10 @@
     }
 
     &-input-container > span.error {
+      position: absolute;
+      display: block;
+      top: -2.9rem;
+      right: 0;
       font-family: 'Roboto', sans-serif;
       font-size: $font-size-xs;
       font-weight: 400;

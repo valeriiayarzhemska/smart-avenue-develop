@@ -1,5 +1,3 @@
-'use strict';
-
 $(document).ready(function () {
   $(".js-select-language").select2();
 

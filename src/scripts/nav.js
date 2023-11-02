@@ -1,22 +1,20 @@
-'use strict';
+const navIconBurger = $('.nav-mobile__icons--burger');
+const navIconCross = $('.nav-mobile__icons--cross');
+const navLists = $('.nav-mobile__lists');
+const navListsActive = {
+  transform: 'translateX(-100%)',
+  visibility: 'hidden'
+};
+const headerHeight = $('.nav__content').height();
+const headerHeightMobile = $('.nav-mobile__content').height();
 
-const navIconBurger = document.querySelector('.nav-mobile__icons--burger');
-const navIconCross = document.querySelector('.nav-mobile__icons--cross');
-
-window.addEventListener('hashchange', () => {
-  if (window.location.hash === '#nav') {
-    navIconBurger.classList.add('nav-mobile__icons--undisplayed');
-    navIconCross.classList.remove('nav-mobile__icons--undisplayed');
-
-    document.body.style.overflow = 'hidden';
-  } else {
-    navIconBurger.classList.remove('nav-mobile__icons--undisplayed');
-    navIconCross.classList.add('nav-mobile__icons--undisplayed');
-
-    document.body.style.overflow = 'auto';
-  }
-});
-
+function hideNavList() {
+  navIconBurger.removeClass('nav-mobile__icons--undisplayed');
+  navIconCross.addClass('nav-mobile__icons--undisplayed');
+  navLists.css(navListsActive);
+  $('body').css('overflow', 'auto');
+};
+  
 function handleScroll() {
   const scroll = $(window).scrollTop();
   const shouldAddNavClasses = scroll > 0;
@@ -27,14 +25,47 @@ function handleScroll() {
     .toggleClass('nav__item--scrolling', shouldAddNavClasses)
     .toggleClass('nav__link--scrolling', shouldAddNavClasses);
 
-  $('.select2-selection__rendered')
-    .toggleClass('select2-text--scrolling', shouldAddNavClasses);
+  $('.select2-selection__rendered').toggleClass('select2-text--scrolling', shouldAddNavClasses);
 }
 
-$(document).ready(function() {
-  handleScroll();
-});
+$(document).ready(function () {
+  $('.nav-mobile__icons--burger').on('click', function () {
+    navIconBurger.addClass('nav-mobile__icons--undisplayed');
+    navIconCross.removeClass('nav-mobile__icons--undisplayed');
+    navLists.css({
+      transform: 'translateX(0)',
+      visibility: 'visible'
+    });
+    $('body').css('overflow', 'hidden');
+  });
+  
+  $('.nav-mobile__icons--cross').on('click', hideNavList);
 
-$(window).scroll(function() {
   handleScroll();
+
+  $('.nav__link, .button__link, .news__swiper-slide-title-link, .button-transparent__link').on('click', function (event) {
+    event.preventDefault();
+  
+    const targetId = $(this).attr('href');
+  
+    $('html, body').animate({
+      scrollTop: $(targetId).offset().top - headerHeight
+    }, 0);
+  });
+
+  $('.nav-mobile__link').on('click', function (event) {
+    event.preventDefault();
+  
+    const targetId = $(this).attr('href');
+  
+    $('html, body').animate({
+      scrollTop: $(targetId).offset().top - headerHeightMobile
+    }, 0);
+
+    hideNavList();
+  });
+
+  $(document).scroll(function () {
+    handleScroll();
+  });
 });
