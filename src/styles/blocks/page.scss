@@ -41,4 +41,12 @@
       padding: 0 2.5rem;
     }
   }
+
+  &__container-scroll--disable {
+    overflow-y: hidden;
+  }
+
+  &__container-scroll--active {
+    overflow-y: auto;
+  }
 }

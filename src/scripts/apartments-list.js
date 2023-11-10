@@ -1,9 +1,9 @@
 'use strict';
 
 function countSlides(slideIndex, totalSlides) {
-  const counterElement = document.querySelector('.planning__popup-slides-counter span');
-  if (counterElement) {
-    counterElement.textContent = `Зображення ${slideIndex} / ${totalSlides}`;
+  const counterElement = $('.planning__popup-slides-counter span');
+  if (counterElement.length) {
+    counterElement.text(`Зображення ${slideIndex} / ${totalSlides}`);
   }
 }
 
@@ -248,11 +248,11 @@ $(document).ready(function () {
   });
 
   function disableScroll() {
-    $('body').css({ 'overflow-y': 'hidden' });
+    $('body').addClass('page__container-scroll--disable');
   }
-
+  
   function enableScroll() {
-    $('body').css({ 'overflow-y': 'auto' });
+    $('body').removeClass('page__container-scroll--disable');
   }
 
   $('.planning__popup-cancel-button').click(function (event) {

@@ -15,12 +15,12 @@ const errorText = {
 };
 
 function disableScroll() {
-  $('body').css({ 'overflow-y': 'hidden' });
+  $('body').addClass('page__container-scroll--disable');
 }
 
 function clearForm() {
   $('.location__form')[0].reset();
-  $('body').css({ 'overflow-y': 'visible' });
+  $('body').removeClass('page__container-scroll--disable');
 }
 
 $(document).ready(function () {
